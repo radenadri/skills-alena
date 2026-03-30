@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">🧠 ALENA (Autonomous Layer for Executing Networked Agents)</h1>
   <p align="center">
-    <strong>A personal toolkit for autonomous, networked AI agents — 33 skills · 34 commands · 37 workflows · 9 agents · 10 cursor rules · 8 hooks · 13 modules · 11 templates</strong>
+    <strong>A personal toolkit for autonomous, networked AI agents — 34 skills · 35 commands · 38 workflows · 9 agents · 10 cursor rules · 8 hooks · 13 modules · 11 templates</strong>
   </p>
   <p align="center">
     Make your AI coding assistant operate like your own disciplined toolkit.
@@ -38,9 +38,9 @@
 
 ```
                     ╔═══════════════════════════════╗
-                    ║     🎯 ORCHESTRATOR (lean)      ║
-                    ║  13 CLI commands · Quality gates  ║
-                    ║  ~10-15% context · Task() spawn   ║
+                    ║     🎯 ORCHESTRATOR (lean)     ║
+                    ║  13 CLI commands · Quality gates ║
+                    ║  ~10-15% context · Task() spawn  ║
                     ╚════════════╦══════════════════╝
                                  ║
                         Task() spawning
@@ -64,10 +64,14 @@
 
 ## 🔄 Version History
 
-### 🏆 1.0.0 — Initial ALENA Release
+### 1.1.0 — Add `lmf` learning-first flow
+
+- Add `lmf` skills. Add `/lmf` command for Claude Code and Antigravity. 
+
+### 1.0.0 — Initial ALENA Release
 
 - 🧠 **ALENA identity and public release reset** — the toolkit starts at `v1.0.0` with ALENA branding, updated install commands, refreshed docs, and release surfaces aligned under the new package and repository.
-- 🤖 **Full asset library included** — ships with **33 skills**, **34 commands**, **37 workflows**, and **9 specialist agents** covering brainstorming, planning, execution, debugging, auditing, review, verification, memory, and team coordination.
+- 🤖 **Full asset library included** — ships with **34 skills**, **35 commands**, **38 workflows**, and **9 specialist agents** covering brainstorming, planning, execution, debugging, auditing, review, verification, memory, and team coordination.
 - ⚙️ **Deterministic planning core** — `planning-tools.cjs` plus **12 supporting CLI modules** handle state, phase, roadmap, verification, frontmatter, config, templates, milestones, model resolution, and council coordination without relying on brittle freeform markdown edits.
 - 🏛️ **Council system built in** — real subagent spawning, structured handoffs, code-enforced quality gates, task boards, and 6 presets (`full`, `rapid`, `debug`, `architecture`, `refactoring`, `audit`) are included in the first release.
 - 🪝 **Hook and session tooling** — includes **8 hooks** for statusline, update checks, context monitoring, memory capture, cost tracking, and related session behavior where the target runtime supports them.
@@ -293,81 +297,82 @@ ALENA works with **30+ AI coding agents**. **12 platforms have full asset parity
 
 ## 📚 Complete Asset Catalog
 
-### 🧠 Skills (32)
+### 🧠 Skills (34)
 
 Skills are deep instructional documents that teach AI agents HOW to think about specific engineering tasks. Each skill contains principles, protocols, anti-patterns, and quality criteria.
 
-#### 🔷 Core Development (8 skills)
+#### 🔷 Core Development (9 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
 | 1 | 💡 **brainstorming** | Creative ideation — mind maps, structured exploration, and divergent thinking before any feature work |
-| 2 | 📝 **writing-plans** | Task decomposition — dependency-aware plans with effort estimates, risk assessments, and implementation waves |
-| 3 | ⚙️ **executing-plans** | Plan execution — wave-based implementation with checkpoints, inline verification, and state tracking |
-| 4 | 🧪 **test-driven-development** | TDD methodology — red-green-refactor cycle, test architecture, fixture patterns, and coverage strategies |
-| 5 | 🐛 **systematic-debugging** | Scientific debugging — hypothesis-driven investigation with evidence chains and root cause analysis |
-| 6 | 🔍 **code-review** | Structured code review — security, performance, correctness checks with severity-based feedback |
-| 7 | ✅ **verification-before-completion** | Completion gates — automated checks, compliance verification, and regression testing before marking done |
-| 8 | 📦 **git-workflow** | Git best practices — conventional commits, branching strategies, PR workflows, and conflict resolution |
+| 2 | 🧭 **lmf** | Learning-first mode flow — wrapper skill that combines `brainstorming`, `writing-plans`, and `writing-documentation` into a tutorial-first orchestration pattern — ✨ NEW |
+| 3 | 📝 **writing-plans** | Task decomposition — dependency-aware plans with effort estimates, risk assessments, and implementation waves |
+| 4 | ⚙️ **executing-plans** | Plan execution — wave-based implementation with checkpoints, inline verification, and state tracking |
+| 5 | 🧪 **test-driven-development** | TDD methodology — red-green-refactor cycle, test architecture, fixture patterns, and coverage strategies |
+| 6 | 🐛 **systematic-debugging** | Scientific debugging — hypothesis-driven investigation with evidence chains and root cause analysis |
+| 7 | 🔍 **code-review** | Structured code review — security, performance, correctness checks with severity-based feedback |
+| 8 | ✅ **verification-before-completion** | Completion gates — automated checks, compliance verification, and regression testing before marking done |
+| 9 | 📦 **git-workflow** | Git best practices — conventional commits, branching strategies, PR workflows, and conflict resolution |
 
 #### 🔶 Auditing (10 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 9 | 🏛️ **architecture-audit** | Architecture review — modularity, coupling, SOLID compliance, dependency direction, and scalability assessment |
-| 10 | 🔒 **security-audit** | Security assessment — OWASP top 10, auth flows, input validation, secrets management, and vulnerability scanning |
-| 11 | ⚡ **performance-audit** | Performance profiling — N+1 queries, bundle sizes, runtime bottlenecks, caching opportunities, and load testing |
-| 12 | 🗄️ **database-audit** | Database health — schema design, indexing strategy, query optimization, migrations, and normalization review |
-| 13 | 🎨 **frontend-audit** | Frontend quality — component architecture, state management, rendering efficiency, and responsive design |
-| 14 | 🌐 **api-design-audit** | API design review — REST/GraphQL conventions, versioning, error handling, pagination, and documentation |
-| 15 | 📦 **dependency-audit** | Dependency health — outdated packages, security vulnerabilities, license compliance, and bundle impact |
-| 16 | 📊 **observability-audit** | Observability review — logging strategy, metrics, tracing, alerting, and production debugging capability |
-| 17 | ♿ **accessibility-audit** | Accessibility compliance — WCAG standards, keyboard navigation, screen reader support, and color contrast |
-| 18 | 🔄 **ci-cd-audit** | CI/CD pipeline review — build times, test reliability, deployment safety, and pipeline optimization |
+| 10 | 🏛️ **architecture-audit** | Architecture review — modularity, coupling, SOLID compliance, dependency direction, and scalability assessment |
+| 11 | 🔒 **security-audit** | Security assessment — OWASP top 10, auth flows, input validation, secrets management, and vulnerability scanning |
+| 12 | ⚡ **performance-audit** | Performance profiling — N+1 queries, bundle sizes, runtime bottlenecks, caching opportunities, and load testing |
+| 13 | 🗄️ **database-audit** | Database health — schema design, indexing strategy, query optimization, migrations, and normalization review |
+| 14 | 🎨 **frontend-audit** | Frontend quality — component architecture, state management, rendering efficiency, and responsive design |
+| 15 | 🌐 **api-design-audit** | API design review — REST/GraphQL conventions, versioning, error handling, pagination, and documentation |
+| 16 | 📦 **dependency-audit** | Dependency health — outdated packages, security vulnerabilities, license compliance, and bundle impact |
+| 17 | 📊 **observability-audit** | Observability review — logging strategy, metrics, tracing, alerting, and production debugging capability |
+| 18 | ♿ **accessibility-audit** | Accessibility compliance — WCAG standards, keyboard navigation, screen reader support, and color contrast |
+| 19 | 🔄 **ci-cd-audit** | CI/CD pipeline review — build times, test reliability, deployment safety, and pipeline optimization |
 
 #### 🔷 Evolution (4 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 19 | ♻️ **refactoring-safely** | Safe refactoring — incremental transformation with test coverage, feature flags, and rollback strategies |
-| 20 | 📖 **writing-documentation** | Documentation authoring — API docs, architecture diagrams, README standards, and knowledge transfer |
-| 21 | 🗺️ **codebase-mapping** | Codebase analysis — module boundaries, dependency graphs, entry points, and health metrics |
-| 22 | 🚨 **incident-response** | Incident handling — triage protocols, root cause analysis, post-mortems, and prevention measures |
+| 20 | ♻️ **refactoring-safely** | Safe refactoring — incremental transformation with test coverage, feature flags, and rollback strategies |
+| 21 | 📖 **writing-documentation** | Documentation authoring — API docs, architecture diagrams, README standards, and knowledge transfer |
+| 22 | 🗺️ **codebase-mapping** | Codebase analysis — module boundaries, dependency graphs, entry points, and health metrics |
+| 23 | 🚨 **incident-response** | Incident handling — triage protocols, root cause analysis, post-mortems, and prevention measures |
 
-#### 🟣 Agent Intelligence (2 skills) — ✨ NEW in v3
-
-| # | Skill | Description |
-|:---:|:---|:---|
-| 23 | 💾 **persistent-memory** | Automated session memory — captures decisions, context, and learnings across sessions via file-based protocols. Zero infrastructure, works in ANY agent. Inspired by [claude-mem](https://github.com/thedotmack/claude-mem). |
-| 24 | 💎 **agent-team-coordination** | **LLM Council** — Manager-orchestrated multi-agent coordination with Memory Module. Manager has full project knowledge (schemas, routes, services), dynamically routes tasks to specialist sub-agents, enables peer communication, handles escalations across 6 council presets. |
-
-#### 🔶 Integration & Completeness (3 skills) — ✨ NEW
+#### 🟣 Agent Intelligence (2 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 25 | 🔗 **full-stack-api-integration** | End-to-end API integration — spec analysis, surface mapping, SOLID-compliant API layer design, systematic endpoint implementation, and integration testing |
-| 26 | 🏥 **product-completeness-audit** | Functional completeness verification — 5-level completeness spectrum, placeholder detection, broken flow identification, and API connection validation |
-| 27 | 🔬 **brutal-exhaustive-audit** | No-shortcuts 5-pass audit — build verification, route checking, data flow tracing, user flow testing, and edge case validation with anti-shortcut rules |
+| 24 | 💾 **persistent-memory** | Automated session memory — captures decisions, context, and learnings across sessions via file-based protocols. Zero infrastructure, works in ANY agent. Inspired by [claude-mem](https://github.com/thedotmack/claude-mem). |
+| 25 | 💎 **agent-team-coordination** | **LLM Council** — Manager-orchestrated multi-agent coordination with Memory Module. Manager has full project knowledge (schemas, routes, services), dynamically routes tasks to specialist sub-agents, enables peer communication, handles escalations across 6 council presets. |
+
+#### 🔶 Integration & Completeness (4 skills)
+
+| # | Skill | Description |
+|:---:|:---|:---|
+| 26 | 🔗 **full-stack-api-integration** | End-to-end API integration — spec analysis, surface mapping, SOLID-compliant API layer design, systematic endpoint implementation, and integration testing |
+| 27 | 🏥 **product-completeness-audit** | Functional completeness verification — 5-level completeness spectrum, placeholder detection, broken flow identification, and API connection validation |
+| 28 | 🔬 **brutal-exhaustive-audit** | No-shortcuts 5-pass audit — build verification, route checking, data flow tracing, user flow testing, and edge case validation with anti-shortcut rules |
+| 29 | 🔄 **codebase-conformity** | Pattern uniformity enforcement — read existing patterns before writing, match them exactly, and double-verify conformity before claiming done |
 
 #### 🔀 Migration (1 skill)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 28 | 🔀 **nextjs-to-nuxt-migration** | Next.js → Nuxt 4 migration — submodule analysis, backend verification, multi-pass execution (backend wiring → feature completeness → CSS polish → verification), sidebar registration, theme/dark-mode rules, URL encoding, Agent Team File Protocol, and Playwright visual QA |
+| 30 | 🔀 **nextjs-to-nuxt-migration** | Next.js → Nuxt 4 migration — submodule analysis, backend verification, multi-pass execution (backend wiring → feature completeness → CSS polish → verification), sidebar registration, theme/dark-mode rules, URL encoding, Agent Team File Protocol, and Playwright visual QA |
 
 #### 🔸 Meta (5 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 29 | 📘 **using-skills** | How to use and combine skills effectively in your workflow |
-| 30 | ✍️ **writing-skills** | How to create new skills — format, quality standards, and testing requirements |
-| 31 | 🔄 **codebase-conformity** | Pattern uniformity enforcement — read existing patterns before writing, match them exactly, double-verify conformity before claiming done |
-| 32 | 🎨 **ui-ux-redesign** | Full-stack visual audit — inventories backend APIs, audits every component and design token, analyzes user flows, and produces layered redesign recommendations |
-| 33 | 📏 **_rules** | Master rules skill — consolidates core principles, anti-hallucination protocol, severity framework, and skill activation table |
+| 31 | 📘 **using-skills** | How to use and combine skills effectively in your workflow |
+| 32 | ✍️ **writing-skills** | How to create new skills — format, quality standards, and testing requirements |
+| 33 | 🎨 **ui-ux-redesign** | Full-stack visual audit — inventories backend APIs, audits every component and design token, analyzes user flows, and produces layered redesign recommendations |
+| 34 | 📏 **_rules** | Master rules skill — consolidates core principles, anti-hallucination protocol, severity framework, and skill activation table |
 
 ---
 
-### ⚡ Commands (34)
+### ⚡ Commands (35)
 
 Commands are Claude Code slash commands (`.md` files installed to `.claude/commands/`). They provide structured workflows for common project tasks.
 
@@ -376,12 +381,13 @@ Commands are Claude Code slash commands (`.md` files installed to `.claude/comma
 | Command | Description |
 |:---|:---|
 | `/init-project` | 🏗️ Initialize a new project with `.planning/` directory — `PROJECT.md`, `REQUIREMENTS.md`, `ROADMAP.md`, `STATE.md`, `config.json`. Uses `planning-tools.cjs` for deterministic bootstrapping. |
-| `/discuss` | 💬 Pre-planning MCQ decision capture — presents multiple-choice questions with recommendations, quick-answer format (`1A 2B 3C`), locks decisions in CONTEXT.md — ✨ NEW |
+| `/discuss` | 💬 Pre-planning MCQ decision capture — presents multiple-choice questions with recommendations, quick-answer format (`1A 2B 3C`), locks decisions in CONTEXT.md |
+| `/lmf` | 🧭 Learning-first tutorial flow — uses the local `lmf` wrapper skill to combine explanation, planning, and documentation-style guidance before execution — ✨ NEW |
 | `/plan` | 📋 Create a 2-3 task implementation plan with task anatomy (`<files>` `<action>` `<verify>` `<done>`), context budgets, and locked decision enforcement |
 | `/execute` | ⚙️ Execute an implementation plan with deviation protocol (4 categories), checkpoint system, and `planning-tools.cjs` state management |
 | `/verify` | ✅ Validate implementations against plans — automated checks, compliance verification, regression testing, conversational UAT |
 | `/progress` | 📊 Display project progress, phase status, and task completion from `.planning/` state files |
-| `/settings` | ⚙️ View/modify project config — mode (interactive/auto), depth (quick/standard/comprehensive), workflow preferences — ✨ NEW |
+| `/settings` | ⚙️ View/modify project config — mode (interactive/auto), depth (quick/standard/comprehensive), workflow preferences |
 
 #### 🔷 Research & Documentation
 
@@ -418,14 +424,14 @@ Commands are Claude Code slash commands (`.md` files installed to `.claude/comma
 | `/quick` | ⚡ Execute small, well-defined tasks without full project planning |
 | `/commit` | 📦 Create well-formatted Conventional Commits with proper scope and body |
 
-#### 🟣 Agent Intelligence — ✨ NEW in v3
+#### 🟣 Agent Intelligence
 
 | Command | Description |
 |:---|:---|
 | `/memory` | 💾 Persistent memory management — `init`, `read`, `write`, `compress`, `status` operations |
 | `/team` | 🤝 Multi-role team coordination — `start`, `resume`, `next`, `board`, `status` operations |
 
-#### 🔶 Integration & Auditing — ✨ NEW
+#### 🔶 Integration & Auditing
 
 | Command | Description |
 |:---|:---|
@@ -447,14 +453,15 @@ Commands are Claude Code slash commands (`.md` files installed to `.claude/comma
 
 ---
 
-### 🔄 Workflows (37)
+### 🔄 Workflows (38)
 
 Workflows are Antigravity step-by-step execution scripts (`.md` files installed to `.agent/workflows/`). Many include `// turbo` annotations for auto-execution.
 
 | Workflow | Description |
 |:---|:---|
 | `/init-project` | 🏗️ Initialize project with `.planning/` structure |
-| `/discuss` | 💬 Pre-planning MCQ discussion with quick-answer —  ✨ NEW |
+| `/discuss` | 💬 Pre-planning MCQ discussion with quick-answer |
+| `/lmf` | 🧭 Learning-first tutorial workflow that mirrors the local `lmf` wrapper skill in Antigravity — ✨ NEW |
 | `/plan-feature` | 📋 Plan a feature with research, design, and task decomposition |
 | `/execute` | ⚙️ Execute plans with wave-based steps and verification |
 | `/verify` | ✅ Validate implementation against plans |
@@ -478,13 +485,13 @@ Workflows are Antigravity step-by-step execution scripts (`.md` files installed 
 | `/codebase-map` | 🗺️ Codebase analysis and mapping |
 | `/deps-update` | 📦 Dependency updates |
 | `/incident-response` | 🚨 Incident triage and response |
-| `/memory-sync` | 💾 Memory read/write/compress operations — ✨ NEW |
-| `/team-session` | 🤝 Multi-role team coordination — ✨ NEW |
-| `/integrate-api` | 🔗 Full-stack API integration workflow — ✨ NEW |
-| `/product-health-check` | 🏥 Product completeness audit workflow — ✨ NEW |
-| `/deep-audit` | 🔬 Brutal exhaustive audit workflow — ✨ NEW |
-| `/redesign` | 🎨 Full UI/UX redesign workflow — ✨ NEW |
-| `/gap-closure` | 🔧 Close execution gaps with focused mini-plans — ✨ NEW |
+| `/memory-sync` | 💾 Memory read/write/compress operations |
+| `/team-session` | 🤝 Multi-role team coordination |
+| `/integrate-api` | 🔗 Full-stack API integration workflow |
+| `/product-health-check` | 🏥 Product completeness audit workflow |
+| `/deep-audit` | 🔬 Brutal exhaustive audit workflow |
+| `/redesign` | 🎨 Full UI/UX redesign workflow |
+| `/gap-closure` | 🔧 Close execution gaps with focused mini-plans |
 
 ---
 
@@ -520,8 +527,8 @@ Cursor rules are `.mdc` files installed to `.cursor/rules/`. They guide Cursor A
 | 🗄️ **database** | Database rules — schema design, indexing, query optimization, migrations |
 | 🧪 **testing** | Testing standards — coverage requirements, fixture patterns, assertion quality |
 | 🔍 **code-review** | Code review checklist — automated and manual review criteria |
-| 💾 **memory-protocol** | Persistent memory — auto-read MEMORY.md on start, auto-write on end — ✨ NEW |
-| 🤝 **team-protocol** | Team coordination — sequential role-switching with blackboard — ✨ NEW |
+| 💾 **memory-protocol** | Persistent memory — auto-read MEMORY.md on start, auto-write on end |
+| 🤝 **team-protocol** | Team coordination — sequential role-switching with blackboard |
 
 ---
 
@@ -534,8 +541,8 @@ Universal rules (`.md` files) that can be appended to `GEMINI.md`, `CLAUDE.md`, 
 | 🏗️ **core-principles** | Foundational engineering principles — SOLID, DRY, KISS, YAGNI, and clean architecture |
 | 🚫 **anti-hallucination** | Verification-first protocol — never fabricate APIs, paths, or configs |
 | ⚖️ **severity-framework** | Issue severity classification — critical/major/minor/nit with response criteria |
-| 💾 **memory-protocol** | Persistent memory instructions — auto-read and auto-write `.planning/MEMORY.md` — ✨ NEW |
-| 🤝 **team-protocol** | Team coordination instructions — role-switching and blackboard protocol — ✨ NEW |
+| 💾 **memory-protocol** | Persistent memory instructions — auto-read and auto-write `.planning/MEMORY.md` |
+| 🤝 **team-protocol** | Team coordination instructions — role-switching and blackboard protocol |
 
 ---
 
@@ -737,6 +744,7 @@ npx @radenadri/skills-alena add --global
 
 # Install specific skills
 npx @radenadri/skills-alena add persistent-memory code-review
+npx @radenadri/skills-alena add lmf brainstorming writing-plans writing-documentation
 
 # Update all skills to latest version
 npx @radenadri/skills-alena update
@@ -780,6 +788,8 @@ npx @radenadri/skills-alena help
 | **GEMINI.md** | Appends activation section (preserves your content). Updates on re-install. | ❌ Skipped |
 | **Memory** | Never installed (created at runtime per-project). | ❌ Never installed |
 
+If you want the full local `lmf` experience, install locally so the `lmf` wrapper skill can be paired with the Claude Code `/lmf` command and the Antigravity `/lmf` workflow. Global install still includes the `lmf` skill itself, but not the local command/workflow surfaces.
+
 ### What Gets Installed Where
 
 | Asset Type | Claude Code | Cursor | Antigravity |
@@ -798,6 +808,9 @@ npx @radenadri/skills-alena help
 |:---|:---|
 | [🌐 Website](https://alena.radenadri.xyz) | Product homepage and primary landing page |
 | [📖 Wiki](https://github.com/radenadri/skills-alena/wiki) | Comprehensive GitHub Wiki with guides and reference |
+| [`skills/lmf/SKILL.md`](skills/lmf/SKILL.md) | Local wrapper skill for the `lmf` orchestrator pattern |
+| [`commands/lmf.md`](commands/lmf.md) | Claude Code `/lmf` learning-first command |
+| [`workflows/lmf.md`](workflows/lmf.md) | Antigravity `/lmf` learning-first workflow |
 | [Agent Teams & Memory](docs/AGENT-TEAMS-AND-MEMORY.md) | Comprehensive guide to the team coordination and persistent memory systems |
 | [Competitive Analysis](docs/COMPETITIVE_ANALYSIS.md) | Analysis of GSD, Claude Code, Cursor, and Antigravity frameworks |
 | [Audit Report](docs/AUDIT-REPORT.md) | Comprehensive 10/10 quality audit of all 29 skills |
@@ -810,9 +823,9 @@ npx @radenadri/skills-alena help
 
 | Metric | Count |
 |:---:|:---:|
-| 🧠 Skills | **32** |
-| ⚡ Commands | **34** |
-| 🔄 Workflows | **37** |
+| 🧠 Skills | **34** |
+| ⚡ Commands | **35** |
+| 🔄 Workflows | **38** |
 | 🤖 Agents | **9** |
 | 🎯 Cursor Rules | **10** |
 | 📏 Rules | **5** |
