@@ -22,6 +22,7 @@
 - [persistent-memory](examples-skills-persistent-memory)
 - [code-review](examples-skills-code-review)
 - [brainstorming](examples-skills-brainstorming)
+- [write-prd](examples-skills-write-prd)
 - [lmf](examples-skills-lmf)
 - [writing-plans](examples-skills-writing-plans)
 - [executing-plans](examples-skills-executing-plans)
@@ -54,6 +55,7 @@
 - [discuss](examples-commands-discuss)
 - [settings](examples-commands-settings)
 - [debug](examples-commands-debug)
+- [prd](examples-commands-prd)
 - [lmf](examples-commands-lmf)
 - [plan](examples-commands-plan)
 - [execute](examples-commands-execute)
@@ -65,6 +67,7 @@
 
 ### 🔄 Workflows
 - [debug](examples-workflows-debug)
+- [prd](examples-workflows-prd)
 - [lmf](examples-workflows-lmf)
 - [audit](examples-workflows-audit)
 - [commit](examples-workflows-commit)

@@ -97,6 +97,7 @@ Slash commands are available in `commands/`. Key commands:
 | `/deep-audit` | Brutal 5-pass exhaustive audit |
 | `/discuss` | Lock user preferences BEFORE planning — prevents rework |
 | `/lmf` | Run the learning-first tutorial flow before or alongside execution |
+| `/prd` | Create a product requirements document through an interview-first flow |
 | `/plan` | Create executable prompt plans with task anatomy |
 | `/execute` | Execute plans with deviation protocol and checkpoints |
 | `/settings` | View/modify project config (mode, depth, preferences) |
@@ -169,9 +170,10 @@ alena/
 │   ├── investigator.md
 │   └── fixer.md
 ├── cursor-rules/          ← Cursor IDE rules (10 rules)
-└── skills/                ← Composable skill library (31 skills)
+└── skills/                ← Composable skill library (32 skills)
     ├── brainstorming/
     ├── lmf/
+    ├── write-prd/
     ├── writing-plans/
     ├── executing-plans/
     ├── test-driven-development/

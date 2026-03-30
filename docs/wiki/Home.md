@@ -8,9 +8,9 @@ ALENA is independently maintained by Adriana Eka Prayudha. It is also explicitly
 
 ## What Ships in v1.1.0
 
-- **34 skills** for planning, debugging, reviewing, auditing, documentation, memory, coordination, and `lmf` learning-first guidance
-- **35 Claude Code commands** for project lifecycle work
-- **38 Antigravity workflows** for guided execution
+- **35 skills** for planning, PRD writing, debugging, reviewing, auditing, documentation, memory, coordination, and `lmf` learning-first guidance
+- **36 Claude Code commands** for project lifecycle work
+- **39 Antigravity workflows** for guided execution
 - **9 specialist agents** for structured team-style delegation
 - **8 hooks**, **10 Cursor rules**, **11 templates**, and **2 reference docs**
 
@@ -23,6 +23,16 @@ ALENA now documents the local `lmf` pattern in three layers:
 - `workflows/lmf.md` for Antigravity
 
 The wrapper skill composes `brainstorming`, `writing-plans`, and `writing-documentation` so the user gets a tutorial-first answer before execution.
+
+### PRD Flow in the Wiki
+
+ALENA also documents local PRD creation in three layers:
+
+- `skills/write-prd/` as the wrapper skill
+- `commands/prd.md` for Claude Code
+- `workflows/prd.md` for Antigravity
+
+`write-prd` is interview-first and product-first. It clarifies the user, problem, goals, non-goals, and success criteria before handing the result off to implementation planning.
 
 ---
 
@@ -57,6 +67,9 @@ The wrapper skill composes `brainstorming`, `writing-plans`, and `writing-docume
 - [examples-commands-lmf](examples-commands-lmf.md) — run the learning-first `/lmf` flow in Claude Code
 - [examples-workflows-lmf](examples-workflows-lmf.md) — run the learning-first `/lmf` flow in Antigravity
 - [examples-skills-lmf](examples-skills-lmf.md) — understand when and how the wrapper skill teaches before execution
+- [examples-commands-prd](examples-commands-prd.md) — draft a product requirements document in Claude Code
+- [examples-workflows-prd](examples-workflows-prd.md) — draft a product requirements document in Antigravity
+- [examples-skills-write-prd](examples-skills-write-prd.md) — understand when and how PRD drafting should interview before writing
 - [examples-skills-persistent-memory](examples-skills-persistent-memory.md) — keep context across sessions
 - [examples-skills-agent-team-coordination](examples-skills-agent-team-coordination.md) — split complex work across specialist agents
 - [examples-workflows-debug](examples-workflows-debug.md) — debug with evidence instead of guesswork
