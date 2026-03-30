@@ -7,12 +7,12 @@
 | Category | Examples | Coverage |
 |----------|----------|----------|
 | Getting Started | 2 | Representative walkthroughs |
-| Skills | 31 | Most-used skills covered |
-| Commands | 34 | Full command example set |
-| Workflows | 30 | Core workflow coverage |
+| Skills | 32 | Most-used skills covered |
+| Commands | 35 | Full command example set |
+| Workflows | 31 | Core workflow coverage |
 | Agents | 7 | Primary team roles covered |
 | Rules | 15 | Universal + Cursor rule examples |
-| **Total** | **119** | **Curated wiki coverage** |
+| **Total** | **122** | **Curated wiki coverage** |
 
 ---
 
@@ -33,6 +33,7 @@
 | Skill | Description |
 |-------|-------------|
 | [brainstorming](examples-skills-brainstorming) | Creative ideation |
+| [lmf](examples-skills-lmf) | Learning-first tutorial orchestration |
 | [writing-plans](examples-skills-writing-plans) | Task decomposition |
 | [executing-plans](examples-skills-executing-plans) | Wave-based execution |
 | [systematic-debugging](examples-skills-systematic-debugging) | Hypothesis-driven debugging |
@@ -100,6 +101,7 @@
 | [/verify](examples-commands-verify) | Verification |
 | [/doc](examples-commands-doc) | Documentation |
 | [/explain](examples-commands-explain) | Explanations |
+| [/lmf](examples-commands-lmf) | Learning-first tutorial flow |
 | [/research](examples-commands-research) | Deep research |
 | [/integrate](examples-commands-integrate) | API integration |
 | [/memory](examples-commands-memory) | Memory management |
@@ -130,6 +132,7 @@
 | [/doc](examples-workflows-doc) | Documentation |
 | [/execute](examples-workflows-execute) | Plan execution |
 | [/explain](examples-workflows-explain) | Explanations |
+| [/lmf](examples-workflows-lmf) | Learning-first tutorial flow |
 | [/fix-issue](examples-workflows-fix-issue) | Issue fixing |
 | [/incident-response](examples-workflows-incident-response) | Incidents |
 | [/init-project](examples-workflows-init-project) | Project init |

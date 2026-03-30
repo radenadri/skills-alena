@@ -1,6 +1,6 @@
 # 🧠 Skills Reference — Core Development
 
-> 8 foundational skills for everyday software engineering
+> 9 foundational skills for everyday software engineering
 
 These skills cover the complete development workflow — from brainstorming ideas through execution, testing, debugging, review, and delivery.
 
@@ -30,7 +30,30 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 2. 📝 writing-plans
+## 2. 🧭 lmf
+
+**Use When:** You want a learning-first walkthrough, tutorial-style implementation guidance, or a teaching layer before execution.
+
+**What It Teaches The Agent:**
+- How to explain the mental model before prescribing steps
+- How to synthesize multiple ALENA skills into one teaching-oriented response
+- How to keep explanation grounded in the current repo instead of generic tutorial filler
+- How to end with a concrete next move
+
+**Key Protocols:**
+1. Explain what the task actually is in plain English
+2. Teach the mental model before code or checklists
+3. Compose `brainstorming`, `writing-plans`, and `writing-documentation`
+4. Stay local-first and contextual
+5. Land on an immediate next action the user can follow
+
+**Related Surface Area:**
+- Claude Code: `/lmf`
+- Antigravity: `/lmf`
+
+---
+
+## 3. 📝 writing-plans
 
 **Use When:** Before implementing any feature or change — when you need a structured plan.
 
@@ -56,7 +79,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 3. ⚙️ executing-plans
+## 4. ⚙️ executing-plans
 
 **Use When:** After a plan is written — when it's time to implement.
 
@@ -76,7 +99,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 4. 🧪 test-driven-development
+## 5. 🧪 test-driven-development
 
 **Use When:** Writing any production code — tests should come first.
 
@@ -102,7 +125,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 5. 🐛 systematic-debugging
+## 6. 🐛 systematic-debugging
 
 **Use When:** Investigating bugs, unexpected behavior, or production issues.
 
@@ -131,7 +154,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 6. 🔍 code-review
+## 7. 🔍 code-review
 
 **Use When:** After implementation — reviewing code for quality, security, and correctness.
 
@@ -158,7 +181,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 7. ✅ verification-before-completion
+## 8. ✅ verification-before-completion
 
 **Use When:** Before marking any task as done — the final quality gate.
 
@@ -179,7 +202,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 8. 📦 git-workflow
+## 9. 📦 git-workflow
 
 **Use When:** Making commits, branches, PRs, or dealing with Git operations.
 

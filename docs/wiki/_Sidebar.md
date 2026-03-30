@@ -22,6 +22,7 @@
 - [persistent-memory](examples-skills-persistent-memory)
 - [code-review](examples-skills-code-review)
 - [brainstorming](examples-skills-brainstorming)
+- [lmf](examples-skills-lmf)
 - [writing-plans](examples-skills-writing-plans)
 - [executing-plans](examples-skills-executing-plans)
 - [full-stack-api-integration](examples-skills-full-stack-api-integration)
@@ -53,6 +54,7 @@
 - [discuss](examples-commands-discuss)
 - [settings](examples-commands-settings)
 - [debug](examples-commands-debug)
+- [lmf](examples-commands-lmf)
 - [plan](examples-commands-plan)
 - [execute](examples-commands-execute)
 - [commit](examples-commands-commit)
@@ -63,6 +65,7 @@
 
 ### 🔄 Workflows
 - [debug](examples-workflows-debug)
+- [lmf](examples-workflows-lmf)
 - [audit](examples-workflows-audit)
 - [commit](examples-workflows-commit)
 - [redesign](examples-workflows-redesign)
@@ -87,7 +90,7 @@
 ---
 
 ## 🧠 Skills
-- [Core Development Skills](Skills-Core-Development) — 8 foundational
+- [Core Development Skills](Skills-Core-Development) — 9 foundational
 - [Auditing Skills](Skills-Auditing) — 10 audits
 - [Evolution Skills](Skills-Evolution) — 4 evolution
 - [Agent Intelligence](Skills-Agent-Intelligence) — 2 team and memory
