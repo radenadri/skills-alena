@@ -323,6 +323,7 @@ const SKILL_CATEGORIES: Record<string, string[]> = {
   "Core Development": [
     "brainstorming",
     "lmf",
+    "write-prd",
     "writing-plans",
     "executing-plans",
     "test-driven-development",
@@ -545,6 +546,7 @@ Skills activate automatically when their conditions are met. You MUST use the re
 ### Workflows
 
 Workflows are installed in \`${agent.workflowsDir}/\`. Use \`/workflow-name\` to execute them. Workflows with \`// turbo\` annotations auto-run safe steps. Use \`/lmf\` for learning-first tutorial and explanation flow.
+Workflows are installed in \`${agent.workflowsDir}/\`. Use \`/workflow-name\` to execute them. Workflows with \`// turbo\` annotations auto-run safe steps. Use \`/lmf\` for learning-first tutorial and explanation flow, and \`/prd\` for interview-first product requirements drafting.
 `;
   }
 
@@ -552,7 +554,7 @@ Workflows are installed in \`${agent.workflowsDir}/\`. Use \`/workflow-name\` to
     content += `
 ### Commands
 
-Slash commands are available in \`${agent.commandsDir}/\`. Key commands include: \`/audit\`, \`/debug\`, \`/lmf\`, \`/plan\`, \`/execute\`, \`/verify\`, \`/commit\`, \`/team\`, \`/memory\`.
+Slash commands are available in \`${agent.commandsDir}/\`. Key commands include: \`/audit\`, \`/debug\`, \`/lmf\`, \`/prd\`, \`/plan\`, \`/execute\`, \`/verify\`, \`/commit\`, \`/team\`, \`/memory\`.
 `;
   }
 
