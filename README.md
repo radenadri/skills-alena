@@ -8,7 +8,6 @@
   </p>
   <p align="center">
     <a href="#-quick-start"><img src="https://img.shields.io/badge/Get_Started-blue?style=for-the-badge" alt="Get Started"></a>
-    <a href="https://alena.radenadri.xyz"><img src="https://img.shields.io/badge/Website-7c3aed?style=for-the-badge&logo=google-chrome&logoColor=white" alt="Website"></a>
     <a href="https://www.npmjs.com/package/@radenadri/skills-alena"><img src="https://img.shields.io/npm/v/%40radenadri%2Fskills-alena?style=for-the-badge&color=red" alt="NPM Version"></a>
     <a href="https://github.com/radenadri/skills-alena/blob/main/LICENSE"><img src="https://img.shields.io/github/license/radenadri/skills-alena?style=for-the-badge" alt="License"></a>
     <a href="https://github.com/radenadri/skills-alena/stargazers"><img src="https://img.shields.io/github/stars/radenadri/skills-alena?style=for-the-badge&color=gold" alt="Stars"></a>
@@ -16,7 +15,6 @@
   <p align="center">
     <a href="https://github.com/radenadri"><img src="https://img.shields.io/badge/GitHub-radenadri-181717?style=flat-square&logo=github" alt="GitHub"></a>
     <a href="https://github.com/radenadri/skills-alena/wiki"><img src="https://img.shields.io/badge/Wiki-Documentation-0969da?style=flat-square&logo=github" alt="Wiki"></a>
-    <a href="https://alena.radenadri.xyz"><img src="https://img.shields.io/badge/Homepage-alena.radenadri.xyz-0f766e?style=flat-square" alt="Homepage"></a>
   </p>
 </p>
 

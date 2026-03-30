@@ -1,6 +1,6 @@
 # ⚡ Commands Reference
 
-> 34 Claude Code slash commands for the complete project lifecycle
+> 35 Claude Code slash commands for the complete project lifecycle
 
 Commands are `.md` files installed to `.claude/commands/`. They provide structured protocols that Claude Code invokes when you type the slash command.
 
@@ -65,6 +65,25 @@ Displays:
 ---
 
 ## 🔬 Research & Documentation
+
+### `/lmf`
+**Run ALENA's learning-first tutorial flow.**
+
+Uses the local `lmf` wrapper skill to combine:
+- `brainstorming` for framing and trade-offs
+- `writing-plans` for ordered next actions
+- `writing-documentation` for clear, reusable explanation
+
+Best for:
+- tutorial-first feature guidance
+- "teach me before we implement"
+- explanation-heavy planning and documentation work
+
+**Usage:**
+```bash
+@/lmf "Help me understand how to add audit logging to this codebase"
+@/lmf "Teach me the right way to design the auth flow before implementation"
+```
 
 ### `/research`
 **Deep research before planning.**
