@@ -72,10 +72,13 @@ ALENA now ships a local PRD creation path for teams that want product clarificat
 
 ## 🔄 Version History
 
-### 1.1.0 — Add `lmf` learning-first flow
+### 1.2.0 — Add `/prd` command
+
+- Add `write-prd` skill. Add `/prd` command for Claude Code and Antigravity.
+
+### 1.1.0 — Add `/lmf` command
 
 - Add `lmf` skills. Add `/lmf` command for Claude Code and Antigravity. 
-- Add `write-prd` skill. Add `/prd` command for Claude Code and Antigravity.
 
 ### 1.0.0 — Initial ALENA Release
 
