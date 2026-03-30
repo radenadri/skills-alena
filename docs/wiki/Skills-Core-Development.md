@@ -1,6 +1,6 @@
 # 🧠 Skills Reference — Core Development
 
-> 9 foundational skills for everyday software engineering
+> 10 foundational skills for everyday software engineering
 
 These skills cover the complete development workflow — from brainstorming ideas through execution, testing, debugging, review, and delivery.
 
@@ -30,7 +30,30 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 2. 🧭 lmf
+## 2. 📄 write-prd
+
+**Use When:** You need a product requirements document, feature brief, or interview-first product artifact before implementation planning.
+
+**What It Teaches The Agent:**
+- How to clarify the actual problem before discussing solutions
+- How to separate product requirements from implementation tasks
+- How to structure a reusable PRD with goals, non-goals, requirements, and success metrics
+- How to hand off cleanly into planning after the PRD is accepted
+
+**Key Protocols:**
+1. Interview first instead of drafting from assumptions
+2. Clarify the user, problem, goals, non-goals, and constraints
+3. Produce a product artifact, not an execution plan
+4. Compose `brainstorming` and `writing-documentation` first
+5. Hand off into `writing-plans` only after the PRD is approved
+
+**Related Surface Area:**
+- Claude Code: `/prd`
+- Antigravity: `/prd`
+
+---
+
+## 3. 🧭 lmf
 
 **Use When:** You want a learning-first walkthrough, tutorial-style implementation guidance, or a teaching layer before execution.
 
@@ -53,7 +76,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 3. 📝 writing-plans
+## 4. 📝 writing-plans
 
 **Use When:** Before implementing any feature or change — when you need a structured plan.
 
@@ -79,7 +102,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 4. ⚙️ executing-plans
+## 5. ⚙️ executing-plans
 
 **Use When:** After a plan is written — when it's time to implement.
 
@@ -99,7 +122,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 5. 🧪 test-driven-development
+## 6. 🧪 test-driven-development
 
 **Use When:** Writing any production code — tests should come first.
 
@@ -125,7 +148,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 6. 🐛 systematic-debugging
+## 7. 🐛 systematic-debugging
 
 **Use When:** Investigating bugs, unexpected behavior, or production issues.
 
@@ -154,7 +177,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 7. 🔍 code-review
+## 8. 🔍 code-review
 
 **Use When:** After implementation — reviewing code for quality, security, and correctness.
 
@@ -181,7 +204,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 8. ✅ verification-before-completion
+## 9. ✅ verification-before-completion
 
 **Use When:** Before marking any task as done — the final quality gate.
 
@@ -202,7 +225,7 @@ These skills cover the complete development workflow — from brainstorming idea
 
 ---
 
-## 9. 📦 git-workflow
+## 10. 📦 git-workflow
 
 **Use When:** Making commits, branches, PRs, or dealing with Git operations.
 

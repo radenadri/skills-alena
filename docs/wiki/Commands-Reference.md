@@ -1,6 +1,6 @@
 # ⚡ Commands Reference
 
-> 35 Claude Code slash commands for the complete project lifecycle
+> 36 Claude Code slash commands for the complete project lifecycle
 
 Commands are `.md` files installed to `.claude/commands/`. They provide structured protocols that Claude Code invokes when you type the slash command.
 
@@ -65,6 +65,20 @@ Displays:
 ---
 
 ## 🔬 Research & Documentation
+
+### `/prd`
+**Create a product requirements document through an interview-first flow.**
+
+Uses the local `write-prd` wrapper skill to:
+- clarify the user, problem, goals, non-goals, and success criteria
+- write a reusable PRD instead of an implementation plan
+- leave a clean handoff into planning once the PRD is accepted
+
+**Usage:**
+```bash
+@/prd "Create a PRD for team-based access control"
+@/prd "Draft a feature brief for audit logging in the admin app"
+```
 
 ### `/lmf`
 **Run ALENA's learning-first tutorial flow.**

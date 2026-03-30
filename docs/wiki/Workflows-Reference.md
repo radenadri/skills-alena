@@ -1,6 +1,6 @@
 # 🔄 Workflows Reference
 
-> 38 Antigravity workflows that mirror ALENA's planning, execution, verification, and maintenance flows
+> 39 Antigravity workflows that mirror ALENA's planning, execution, verification, and maintenance flows
 
 Workflows are `.md` files installed to `.agent/workflows/`. They provide step-by-step execution guides that Antigravity follows. Steps marked `// turbo` are auto-executed without user confirmation.
 
@@ -27,60 +27,65 @@ Workflows are `.md` files installed to `.agent/workflows/`. They provide step-by
 | # | Workflow | Turbo? | Description |
 |:---:|:---|:---:|:---|
 | 10 | `/lmf` | — | Run the learning-first tutorial flow using the local `lmf` wrapper skill |
-| 11 | `/research` | — | Run structured research with recommendations and citations |
-| 12 | `/doc` | — | Generate or update documentation artifacts |
-| 13 | `/explain` | — | Explain code, architecture, or concepts in detail |
-| 14 | `/codebase-map` | ✅ | Map the codebase and its main boundaries |
-| 15 | `/learn` | ✅ | Capture reusable patterns and session learnings |
+| 11 | `/prd` | — | Run the interview-first PRD workflow using the local `write-prd` wrapper skill |
+| 12 | `/research` | — | Run structured research with recommendations and citations |
+| 13 | `/doc` | — | Generate or update documentation artifacts |
+| 14 | `/explain` | — | Explain code, architecture, or concepts in detail |
+| 15 | `/codebase-map` | ✅ | Map the codebase and its main boundaries |
+| 16 | `/learn` | ✅ | Capture reusable patterns and session learnings |
 
 ### 🔧 Code Quality
 
 | # | Workflow | Turbo? | Description |
 |:---:|:---|:---:|:---|
-| 16 | `/review` | — | Perform structured code review with severity-based findings |
-| 17 | `/test` | ✅ | Generate and run tests |
-| 18 | `/debug` | — | Debug with hypotheses, experiments, and evidence |
-| 19 | `/deep-audit` | — | Run a multi-pass exhaustive audit |
-| 20 | `/fix-issue` | — | Investigate and apply a focused fix |
-| 21 | `/gap-closure` | ✅ | Close verification or delivery gaps with a short follow-up loop |
-| 22 | `/refactor` | — | Refactor safely with behavior preservation |
-| 23 | `/audit` | ✅ | Run a broad codebase audit |
-| 24 | `/quality-gate` | ✅ | Run build, lint, test, and security checks in the right preset |
+| 17 | `/review` | — | Perform structured code review with severity-based findings |
+| 18 | `/test` | ✅ | Generate and run tests |
+| 19 | `/debug` | — | Debug with hypotheses, experiments, and evidence |
+| 20 | `/deep-audit` | — | Run a multi-pass exhaustive audit |
+| 21 | `/fix-issue` | — | Investigate and apply a focused fix |
+| 22 | `/gap-closure` | ✅ | Close verification or delivery gaps with a short follow-up loop |
+| 23 | `/refactor` | — | Refactor safely with behavior preservation |
+| 24 | `/audit` | ✅ | Run a broad codebase audit |
+| 25 | `/quality-gate` | ✅ | Run build, lint, test, and security checks in the right preset |
 
 ### ⚙️ Operations & Security
 
 | # | Workflow | Turbo? | Description |
 |:---:|:---|:---:|:---|
-| 25 | `/security-scan` | ✅ | Scan for vulnerabilities, secrets, and auth issues |
-| 26 | `/performance` | ✅ | Profile and improve performance |
-| 27 | `/migrate` | — | Handle database or code migrations safely |
-| 28 | `/deploy-check` | ✅ | Validate deployment readiness |
-| 29 | `/deps-update` | ✅ | Review and update outdated or vulnerable dependencies |
-| 30 | `/incident-response` | — | Triage and document production incidents |
-| 31 | `/product-health-check` | ✅ | Run an operational and completeness review |
+| 26 | `/security-scan` | ✅ | Scan for vulnerabilities, secrets, and auth issues |
+| 27 | `/performance` | ✅ | Profile and improve performance |
+| 28 | `/migrate` | — | Handle database or code migrations safely |
+| 29 | `/deploy-check` | ✅ | Validate deployment readiness |
+| 30 | `/deps-update` | ✅ | Review and update outdated or vulnerable dependencies |
+| 31 | `/incident-response` | — | Triage and document production incidents |
+| 32 | `/product-health-check` | ✅ | Run an operational and completeness review |
 
 ### 🔄 Git & Release
 
 | # | Workflow | Turbo? | Description |
 |:---:|:---|:---:|:---|
-| 32 | `/commit` | ✅ | Create a conventional commit with structured context |
-| 33 | `/release` | — | Prepare a release, version bump, and publish flow |
+| 33 | `/commit` | ✅ | Create a conventional commit with structured context |
+| 34 | `/release` | — | Prepare a release, version bump, and publish flow |
 
 ### 🟣 Agent Intelligence
 
 | # | Workflow | Turbo? | Description |
 |:---:|:---|:---:|:---|
-| 34 | `/memory-sync` | ✅ | Initialize, read, write, and compress project memory |
-| 35 | `/team-session` | ✅ | Coordinate specialist agents through a team session |
-| 36 | `/loop` | ✅ | Repeat bounded work across multiple targets |
-| 37 | `/orchestrate` | ✅ | Chain multiple workflows into one higher-level objective |
-| 38 | `/redesign` | — | Run ALENA's UI and UX redesign workflow |
+| 35 | `/memory-sync` | ✅ | Initialize, read, write, and compress project memory |
+| 36 | `/team-session` | ✅ | Coordinate specialist agents through a team session |
+| 37 | `/loop` | ✅ | Repeat bounded work across multiple targets |
+| 38 | `/orchestrate` | ✅ | Chain multiple workflows into one higher-level objective |
+| 39 | `/redesign` | — | Run ALENA's UI and UX redesign workflow |
 
 ---
 
 ## `/lmf` Workflow Notes
 
 `/lmf` is the Antigravity entrypoint for ALENA's learning-first flow. It mirrors the local wrapper skill and is best used when you want tutorial-style explanation before you switch to `/plan`, `/execute`, or direct implementation.
+
+## `/prd` Workflow Notes
+
+`/prd` is the Antigravity entrypoint for ALENA's product requirements flow. It mirrors the local `write-prd` wrapper skill and is best used when you need a clarified product artifact before you move into `/plan` or implementation.
 
 ---
 

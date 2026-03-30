@@ -30,12 +30,13 @@ npx @radenadri/skills-alena add --agent claude-code
 **Installs to:**
 | Asset | Directory |
 |:---|:---|
-| Skills (34) | `.claude/skills/{skill-name}/SKILL.md` |
-| Commands (35) | `.claude/commands/{name}.md` |
+| Skills (35) | `.claude/skills/{skill-name}/SKILL.md` |
+| Commands (36) | `.claude/commands/{name}.md` |
 | Agents (9) | `.claude/agents/{name}.md` |
 | Rules (5) | CLAUDE.md (appended) |
 
 `/lmf` is installed here as `.claude/commands/lmf.md`, and it composes the local `lmf` wrapper skill.
+`/prd` is installed here as `.claude/commands/prd.md`, and it uses the local `write-prd` wrapper skill.
 
 ### 🔵 Cursor
 ```bash
@@ -44,7 +45,7 @@ npx @radenadri/skills-alena add --agent cursor
 **Installs to:**
 | Asset | Directory |
 |:---|:---|
-| Skills (34) | `.cursor/skills/{skill-name}/SKILL.md` |
+| Skills (35) | `.cursor/skills/{skill-name}/SKILL.md` |
 | Cursor Rules (10) | `.cursor/rules/{name}.mdc` |
 
 ### 🟢 Antigravity (Gemini)
@@ -54,10 +55,11 @@ npx @radenadri/skills-alena add --agent antigravity
 **Installs to:**
 | Asset | Directory |
 |:---|:---|
-| Skills (34) | `.agent/skills/{skill-name}/SKILL.md` |
-| Workflows (38) | `.agent/workflows/{name}.md` |
+| Skills (35) | `.agent/skills/{skill-name}/SKILL.md` |
+| Workflows (39) | `.agent/workflows/{name}.md` |
 
 `/lmf` is installed here as `.agent/workflows/lmf.md`, and it uses the same local `lmf` wrapper skill.
+`/prd` is installed here as `.agent/workflows/prd.md`, and it mirrors the same local PRD wrapper skill.
 
 ---
 
@@ -83,7 +85,7 @@ Installs into your **home directory** agent config. Skills are available in ALL 
 
 > ⚠️ **Note:** Commands, workflows, agents, and rules are only installed locally (not globally), as they are project-specific.
 
-That matters for `lmf`: global install gives you the `lmf` skill, but the Claude Code `/lmf` command and Antigravity `/lmf` workflow are local-only surfaces.
+That matters for PRD drafting too: global install gives you the `write-prd` skill, but the Claude Code `/prd` command and Antigravity `/prd` workflow are local-only surfaces.
 
 ---
 
@@ -95,6 +97,7 @@ npx @radenadri/skills-alena add persistent-memory agent-team-coordination
 npx @radenadri/skills-alena add code-review systematic-debugging
 npx @radenadri/skills-alena add brainstorming writing-plans executing-plans
 npx @radenadri/skills-alena add lmf brainstorming writing-plans writing-documentation
+npx @radenadri/skills-alena add write-prd brainstorming writing-documentation
 ```
 
 ### Install all skills

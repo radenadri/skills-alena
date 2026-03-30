@@ -1,7 +1,7 @@
 {
   "name": "@radenadri/skills-alena",
-  "version": "1.1.0",
-  "description": "ALENA is a personal toolkit for autonomous, networked AI agents — 33 skills, 34 commands, 37 workflows, 9 agents, 10 cursor rules.",
+  "version": "1.2.0",
+  "description": "ALENA is a personal toolkit for autonomous, networked AI agents",
   "author": {
     "name": "Adriana Eka Prayudha",
     "email": "radenadriep@gmail.com",

@@ -1,7 +1,7 @@
 <p align="center">
   <h1 align="center">🧠 ALENA (Autonomous Layer for Executing Networked Agents)</h1>
   <p align="center">
-    <strong>A personal toolkit for autonomous, networked AI agents — 34 skills · 35 commands · 38 workflows · 9 agents · 10 cursor rules · 8 hooks · 13 modules · 11 templates</strong>
+    <strong>A personal toolkit for autonomous, networked AI agents — 35 skills · 36 commands · 39 workflows · 9 agents · 10 cursor rules · 8 hooks · 13 modules · 11 templates</strong>
   </p>
   <p align="center">
     Make your AI coding assistant operate like your own disciplined toolkit.
@@ -23,6 +23,16 @@
 ## 🌟 What is This?
 
 **ALENA** is a personal toolkit for autonomous, networked AI agents. The long form is **Autonomous Layer for Executing Networked Agents**. Install once, use everywhere — across **34+ supported agents** including Antigravity, Cursor, Claude Code, Gemini CLI, Windsurf, Copilot, and more.
+
+### 📄 PRD Creation Flow
+
+ALENA now ships a local PRD creation path for teams that want product clarification before implementation. The flow is built around:
+
+- a wrapper skill at `skills/write-prd/`
+- a Claude Code command at `commands/prd.md`
+- an Antigravity workflow at `workflows/prd.md`
+
+`write-prd` is not the same as `writing-plans`. `write-prd` is interview-first and product-first: it clarifies the user, problem, goals, non-goals, and success definition before drafting a reusable product requirements document. `writing-plans` starts after that, when the approved PRD needs to turn into implementation work.
 
 ---
 
@@ -65,11 +75,12 @@
 ### 1.1.0 — Add `lmf` learning-first flow
 
 - Add `lmf` skills. Add `/lmf` command for Claude Code and Antigravity. 
+- Add `write-prd` skill. Add `/prd` command for Claude Code and Antigravity.
 
 ### 1.0.0 — Initial ALENA Release
 
 - 🧠 **ALENA identity and public release reset** — the toolkit starts at `v1.0.0` with ALENA branding, updated install commands, refreshed docs, and release surfaces aligned under the new package and repository.
-- 🤖 **Full asset library included** — ships with **34 skills**, **35 commands**, **38 workflows**, and **9 specialist agents** covering brainstorming, planning, execution, debugging, auditing, review, verification, memory, and team coordination.
+- 🤖 **Full asset library included** — ships with **35 skills**, **36 commands**, **39 workflows**, and **9 specialist agents** covering brainstorming, planning, PRD creation, execution, debugging, auditing, review, verification, memory, and team coordination.
 - ⚙️ **Deterministic planning core** — `planning-tools.cjs` plus **12 supporting CLI modules** handle state, phase, roadmap, verification, frontmatter, config, templates, milestones, model resolution, and council coordination without relying on brittle freeform markdown edits.
 - 🏛️ **Council system built in** — real subagent spawning, structured handoffs, code-enforced quality gates, task boards, and 6 presets (`full`, `rapid`, `debug`, `architecture`, `refactoring`, `audit`) are included in the first release.
 - 🪝 **Hook and session tooling** — includes **8 hooks** for statusline, update checks, context monitoring, memory capture, cost tracking, and related session behavior where the target runtime supports them.
@@ -295,82 +306,83 @@ ALENA works with **30+ AI coding agents**. **12 platforms have full asset parity
 
 ## 📚 Complete Asset Catalog
 
-### 🧠 Skills (34)
+### 🧠 Skills (35)
 
 Skills are deep instructional documents that teach AI agents HOW to think about specific engineering tasks. Each skill contains principles, protocols, anti-patterns, and quality criteria.
 
-#### 🔷 Core Development (9 skills)
+#### 🔷 Core Development (10 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
 | 1 | 💡 **brainstorming** | Creative ideation — mind maps, structured exploration, and divergent thinking before any feature work |
-| 2 | 🧭 **lmf** | Learning-first mode flow — wrapper skill that combines `brainstorming`, `writing-plans`, and `writing-documentation` into a tutorial-first orchestration pattern — ✨ NEW |
-| 3 | 📝 **writing-plans** | Task decomposition — dependency-aware plans with effort estimates, risk assessments, and implementation waves |
-| 4 | ⚙️ **executing-plans** | Plan execution — wave-based implementation with checkpoints, inline verification, and state tracking |
-| 5 | 🧪 **test-driven-development** | TDD methodology — red-green-refactor cycle, test architecture, fixture patterns, and coverage strategies |
-| 6 | 🐛 **systematic-debugging** | Scientific debugging — hypothesis-driven investigation with evidence chains and root cause analysis |
-| 7 | 🔍 **code-review** | Structured code review — security, performance, correctness checks with severity-based feedback |
-| 8 | ✅ **verification-before-completion** | Completion gates — automated checks, compliance verification, and regression testing before marking done |
-| 9 | 📦 **git-workflow** | Git best practices — conventional commits, branching strategies, PR workflows, and conflict resolution |
+| 2 | 📄 **write-prd** | Product requirements writing — interview-first wrapper skill that turns feature ideas into structured PRDs before engineering planning — ✨ NEW |
+| 3 | 🧭 **lmf** | Learning-first mode flow — wrapper skill that combines `brainstorming`, `writing-plans`, and `writing-documentation` into a tutorial-first orchestration pattern — ✨ NEW |
+| 4 | 📝 **writing-plans** | Task decomposition — dependency-aware plans with effort estimates, risk assessments, and implementation waves |
+| 5 | ⚙️ **executing-plans** | Plan execution — wave-based implementation with checkpoints, inline verification, and state tracking |
+| 6 | 🧪 **test-driven-development** | TDD methodology — red-green-refactor cycle, test architecture, fixture patterns, and coverage strategies |
+| 7 | 🐛 **systematic-debugging** | Scientific debugging — hypothesis-driven investigation with evidence chains and root cause analysis |
+| 8 | 🔍 **code-review** | Structured code review — security, performance, correctness checks with severity-based feedback |
+| 9 | ✅ **verification-before-completion** | Completion gates — automated checks, compliance verification, and regression testing before marking done |
+| 10 | 📦 **git-workflow** | Git best practices — conventional commits, branching strategies, PR workflows, and conflict resolution |
 
 #### 🔶 Auditing (10 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 10 | 🏛️ **architecture-audit** | Architecture review — modularity, coupling, SOLID compliance, dependency direction, and scalability assessment |
-| 11 | 🔒 **security-audit** | Security assessment — OWASP top 10, auth flows, input validation, secrets management, and vulnerability scanning |
-| 12 | ⚡ **performance-audit** | Performance profiling — N+1 queries, bundle sizes, runtime bottlenecks, caching opportunities, and load testing |
-| 13 | 🗄️ **database-audit** | Database health — schema design, indexing strategy, query optimization, migrations, and normalization review |
-| 14 | 🎨 **frontend-audit** | Frontend quality — component architecture, state management, rendering efficiency, and responsive design |
-| 15 | 🌐 **api-design-audit** | API design review — REST/GraphQL conventions, versioning, error handling, pagination, and documentation |
-| 16 | 📦 **dependency-audit** | Dependency health — outdated packages, security vulnerabilities, license compliance, and bundle impact |
-| 17 | 📊 **observability-audit** | Observability review — logging strategy, metrics, tracing, alerting, and production debugging capability |
-| 18 | ♿ **accessibility-audit** | Accessibility compliance — WCAG standards, keyboard navigation, screen reader support, and color contrast |
-| 19 | 🔄 **ci-cd-audit** | CI/CD pipeline review — build times, test reliability, deployment safety, and pipeline optimization |
+| 11 | 🏛️ **architecture-audit** | Architecture review — modularity, coupling, SOLID compliance, dependency direction, and scalability assessment |
+| 12 | 🔒 **security-audit** | Security assessment — OWASP top 10, auth flows, input validation, secrets management, and vulnerability scanning |
+| 13 | ⚡ **performance-audit** | Performance profiling — N+1 queries, bundle sizes, runtime bottlenecks, caching opportunities, and load testing |
+| 14 | 🗄️ **database-audit** | Database health — schema design, indexing strategy, query optimization, migrations, and normalization review |
+| 15 | 🎨 **frontend-audit** | Frontend quality — component architecture, state management, rendering efficiency, and responsive design |
+| 16 | 🌐 **api-design-audit** | API design review — REST/GraphQL conventions, versioning, error handling, pagination, and documentation |
+| 17 | 📦 **dependency-audit** | Dependency health — outdated packages, security vulnerabilities, license compliance, and bundle impact |
+| 18 | 📊 **observability-audit** | Observability review — logging strategy, metrics, tracing, alerting, and production debugging capability |
+| 19 | ♿ **accessibility-audit** | Accessibility compliance — WCAG standards, keyboard navigation, screen reader support, and color contrast |
+| 20 | 🔄 **ci-cd-audit** | CI/CD pipeline review — build times, test reliability, deployment safety, and pipeline optimization |
 
 #### 🔷 Evolution (4 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 20 | ♻️ **refactoring-safely** | Safe refactoring — incremental transformation with test coverage, feature flags, and rollback strategies |
-| 21 | 📖 **writing-documentation** | Documentation authoring — API docs, architecture diagrams, README standards, and knowledge transfer |
-| 22 | 🗺️ **codebase-mapping** | Codebase analysis — module boundaries, dependency graphs, entry points, and health metrics |
-| 23 | 🚨 **incident-response** | Incident handling — triage protocols, root cause analysis, post-mortems, and prevention measures |
+| 21 | ♻️ **refactoring-safely** | Safe refactoring — incremental transformation with test coverage, feature flags, and rollback strategies |
+| 22 | 📖 **writing-documentation** | Documentation authoring — API docs, architecture diagrams, README standards, and knowledge transfer |
+| 23 | 🗺️ **codebase-mapping** | Codebase analysis — module boundaries, dependency graphs, entry points, and health metrics |
+| 24 | 🚨 **incident-response** | Incident handling — triage protocols, root cause analysis, post-mortems, and prevention measures |
 
 #### 🟣 Agent Intelligence (2 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 24 | 💾 **persistent-memory** | Automated session memory — captures decisions, context, and learnings across sessions via file-based protocols. Zero infrastructure, works in ANY agent. Inspired by [claude-mem](https://github.com/thedotmack/claude-mem). |
-| 25 | 💎 **agent-team-coordination** | **LLM Council** — Manager-orchestrated multi-agent coordination with Memory Module. Manager has full project knowledge (schemas, routes, services), dynamically routes tasks to specialist sub-agents, enables peer communication, handles escalations across 6 council presets. |
+| 25 | 💾 **persistent-memory** | Automated session memory — captures decisions, context, and learnings across sessions via file-based protocols. Zero infrastructure, works in ANY agent. Inspired by [claude-mem](https://github.com/thedotmack/claude-mem). |
+| 26 | 💎 **agent-team-coordination** | **LLM Council** — Manager-orchestrated multi-agent coordination with Memory Module. Manager has full project knowledge (schemas, routes, services), dynamically routes tasks to specialist sub-agents, enables peer communication, handles escalations across 6 council presets. |
 
 #### 🔶 Integration & Completeness (4 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 26 | 🔗 **full-stack-api-integration** | End-to-end API integration — spec analysis, surface mapping, SOLID-compliant API layer design, systematic endpoint implementation, and integration testing |
-| 27 | 🏥 **product-completeness-audit** | Functional completeness verification — 5-level completeness spectrum, placeholder detection, broken flow identification, and API connection validation |
-| 28 | 🔬 **brutal-exhaustive-audit** | No-shortcuts 5-pass audit — build verification, route checking, data flow tracing, user flow testing, and edge case validation with anti-shortcut rules |
-| 29 | 🔄 **codebase-conformity** | Pattern uniformity enforcement — read existing patterns before writing, match them exactly, and double-verify conformity before claiming done |
+| 27 | 🔗 **full-stack-api-integration** | End-to-end API integration — spec analysis, surface mapping, SOLID-compliant API layer design, systematic endpoint implementation, and integration testing |
+| 28 | 🏥 **product-completeness-audit** | Functional completeness verification — 5-level completeness spectrum, placeholder detection, broken flow identification, and API connection validation |
+| 29 | 🔬 **brutal-exhaustive-audit** | No-shortcuts 5-pass audit — build verification, route checking, data flow tracing, user flow testing, and edge case validation with anti-shortcut rules |
+| 30 | 🔄 **codebase-conformity** | Pattern uniformity enforcement — read existing patterns before writing, match them exactly, and double-verify conformity before claiming done |
 
 #### 🔀 Migration (1 skill)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 30 | 🔀 **nextjs-to-nuxt-migration** | Next.js → Nuxt 4 migration — submodule analysis, backend verification, multi-pass execution (backend wiring → feature completeness → CSS polish → verification), sidebar registration, theme/dark-mode rules, URL encoding, Agent Team File Protocol, and Playwright visual QA |
+| 31 | 🔀 **nextjs-to-nuxt-migration** | Next.js → Nuxt 4 migration — submodule analysis, backend verification, multi-pass execution (backend wiring → feature completeness → CSS polish → verification), sidebar registration, theme/dark-mode rules, URL encoding, Agent Team File Protocol, and Playwright visual QA |
 
 #### 🔸 Meta (5 skills)
 
 | # | Skill | Description |
 |:---:|:---|:---|
-| 31 | 📘 **using-skills** | How to use and combine skills effectively in your workflow |
-| 32 | ✍️ **writing-skills** | How to create new skills — format, quality standards, and testing requirements |
-| 33 | 🎨 **ui-ux-redesign** | Full-stack visual audit — inventories backend APIs, audits every component and design token, analyzes user flows, and produces layered redesign recommendations |
-| 34 | 📏 **_rules** | Master rules skill — consolidates core principles, anti-hallucination protocol, severity framework, and skill activation table |
+| 32 | 📘 **using-skills** | How to use and combine skills effectively in your workflow |
+| 33 | ✍️ **writing-skills** | How to create new skills — format, quality standards, and testing requirements |
+| 34 | 🎨 **ui-ux-redesign** | Full-stack visual audit — inventories backend APIs, audits every component and design token, analyzes user flows, and produces layered redesign recommendations |
+| 35 | 📏 **_rules** | Master rules skill — consolidates core principles, anti-hallucination protocol, severity framework, and skill activation table |
 
 ---
 
-### ⚡ Commands (35)
+### ⚡ Commands (36)
 
 Commands are Claude Code slash commands (`.md` files installed to `.claude/commands/`). They provide structured workflows for common project tasks.
 
@@ -380,6 +392,7 @@ Commands are Claude Code slash commands (`.md` files installed to `.claude/comma
 |:---|:---|
 | `/init-project` | 🏗️ Initialize a new project with `.planning/` directory — `PROJECT.md`, `REQUIREMENTS.md`, `ROADMAP.md`, `STATE.md`, `config.json`. Uses `planning-tools.cjs` for deterministic bootstrapping. |
 | `/discuss` | 💬 Pre-planning MCQ decision capture — presents multiple-choice questions with recommendations, quick-answer format (`1A 2B 3C`), locks decisions in CONTEXT.md |
+| `/prd` | 📄 Product requirements drafting — interview-first flow that uses the local `write-prd` wrapper skill to produce a reusable PRD before implementation planning — ✨ NEW |
 | `/lmf` | 🧭 Learning-first tutorial flow — uses the local `lmf` wrapper skill to combine explanation, planning, and documentation-style guidance before execution — ✨ NEW |
 | `/plan` | 📋 Create a 2-3 task implementation plan with task anatomy (`<files>` `<action>` `<verify>` `<done>`), context budgets, and locked decision enforcement |
 | `/execute` | ⚙️ Execute an implementation plan with deviation protocol (4 categories), checkpoint system, and `planning-tools.cjs` state management |
@@ -451,7 +464,7 @@ Commands are Claude Code slash commands (`.md` files installed to `.claude/comma
 
 ---
 
-### 🔄 Workflows (38)
+### 🔄 Workflows (39)
 
 Workflows are Antigravity step-by-step execution scripts (`.md` files installed to `.agent/workflows/`). Many include `// turbo` annotations for auto-execution.
 
@@ -459,6 +472,7 @@ Workflows are Antigravity step-by-step execution scripts (`.md` files installed 
 |:---|:---|
 | `/init-project` | 🏗️ Initialize project with `.planning/` structure |
 | `/discuss` | 💬 Pre-planning MCQ discussion with quick-answer |
+| `/prd` | 📄 Product requirements workflow that mirrors the local `write-prd` wrapper skill in Antigravity — ✨ NEW |
 | `/lmf` | 🧭 Learning-first tutorial workflow that mirrors the local `lmf` wrapper skill in Antigravity — ✨ NEW |
 | `/plan-feature` | 📋 Plan a feature with research, design, and task decomposition |
 | `/execute` | ⚙️ Execute plans with wave-based steps and verification |
@@ -676,21 +690,21 @@ AI coding tasks fail at scale because no single agent can hold all context: data
 
 ```
 alena/
-├── 📂 skills/                   # 32 deep instructional skills
+├── 📂 skills/                   # 35 deep instructional skills
 │   ├── brainstorming/SKILL.md
 │   ├── writing-plans/SKILL.md          # Plans-as-prompts with task anatomy
 │   ├── executing-plans/SKILL.md        # Deviation protocol + checkpoints
 │   ├── persistent-memory/SKILL.md
 │   ├── agent-team-coordination/SKILL.md
 │   └── ... (26 more)
-├── 📂 commands/                 # 34 Claude Code slash commands
+├── 📂 commands/                 # 36 Claude Code slash commands
 │   ├── init-project.md
 │   ├── discuss.md                       ✨ MCQ decision capture
 │   ├── settings.md                      ✨ Config management
 │   ├── memory.md
 │   ├── team.md
 │   └── ... (23 more)
-├── 📂 workflows/                # 37 Antigravity workflows
+├── 📂 workflows/                # 39 Antigravity workflows
 │   ├── init-project.md
 │   ├── discuss.md                       ✨ MCQ discussion workflow
 │   ├── gap-closure.md                   ✨ Execution gap closure
@@ -743,6 +757,7 @@ npx @radenadri/skills-alena add --global
 # Install specific skills
 npx @radenadri/skills-alena add persistent-memory code-review
 npx @radenadri/skills-alena add lmf brainstorming writing-plans writing-documentation
+npx @radenadri/skills-alena add write-prd brainstorming writing-documentation
 
 # Update all skills to latest version
 npx @radenadri/skills-alena update
@@ -786,7 +801,7 @@ npx @radenadri/skills-alena help
 | **GEMINI.md** | Appends activation section (preserves your content). Updates on re-install. | ❌ Skipped |
 | **Memory** | Never installed (created at runtime per-project). | ❌ Never installed |
 
-If you want the full local `lmf` experience, install locally so the `lmf` wrapper skill can be paired with the Claude Code `/lmf` command and the Antigravity `/lmf` workflow. Global install still includes the `lmf` skill itself, but not the local command/workflow surfaces.
+If you want the full local experience, install locally so wrapper skills can be paired with their agent-specific surfaces. That applies to both `lmf` and PRD drafting: global install includes the `lmf` and `write-prd` skills, but the Claude Code `/lmf` and `/prd` commands plus the Antigravity `/lmf` and `/prd` workflows are local-only surfaces.
 
 ### What Gets Installed Where
 
@@ -806,12 +821,15 @@ If you want the full local `lmf` experience, install locally so the `lmf` wrappe
 |:---|:---|
 | [🌐 Website](https://alena.radenadri.xyz) | Product homepage and primary landing page |
 | [📖 Wiki](https://github.com/radenadri/skills-alena/wiki) | Comprehensive GitHub Wiki with guides and reference |
+| [`skills/write-prd/SKILL.md`](skills/write-prd/SKILL.md) | Local wrapper skill for interview-first PRD creation |
+| [`commands/prd.md`](commands/prd.md) | Claude Code `/prd` product requirements command |
+| [`workflows/prd.md`](workflows/prd.md) | Antigravity `/prd` product requirements workflow |
 | [`skills/lmf/SKILL.md`](skills/lmf/SKILL.md) | Local wrapper skill for the `lmf` orchestrator pattern |
 | [`commands/lmf.md`](commands/lmf.md) | Claude Code `/lmf` learning-first command |
 | [`workflows/lmf.md`](workflows/lmf.md) | Antigravity `/lmf` learning-first workflow |
 | [Agent Teams & Memory](docs/AGENT-TEAMS-AND-MEMORY.md) | Comprehensive guide to the team coordination and persistent memory systems |
 | [Competitive Analysis](docs/COMPETITIVE_ANALYSIS.md) | Analysis of GSD, Claude Code, Cursor, and Antigravity frameworks |
-| [Audit Report](docs/AUDIT-REPORT.md) | Comprehensive 10/10 quality audit of all 29 skills |
+| [Audit Report](docs/AUDIT-REPORT.md) | Comprehensive quality audit report for the ALENA skill library |
 | [Contributing](CONTRIBUTING.md) | How to contribute to this project |
 | [Changelog](CHANGELOG.md) | Version history and release notes |
 
@@ -821,9 +839,9 @@ If you want the full local `lmf` experience, install locally so the `lmf` wrappe
 
 | Metric | Count |
 |:---:|:---:|
-| 🧠 Skills | **34** |
-| ⚡ Commands | **35** |
-| 🔄 Workflows | **38** |
+| 🧠 Skills | **35** |
+| ⚡ Commands | **36** |
+| 🔄 Workflows | **39** |
 | 🤖 Agents | **9** |
 | 🎯 Cursor Rules | **10** |
 | 📏 Rules | **5** |

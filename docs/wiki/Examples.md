@@ -7,12 +7,12 @@
 | Category | Examples | Coverage |
 |----------|----------|----------|
 | Getting Started | 2 | Representative walkthroughs |
-| Skills | 32 | Most-used skills covered |
-| Commands | 35 | Full command example set |
-| Workflows | 31 | Core workflow coverage |
+| Skills | 33 | Most-used skills covered |
+| Commands | 36 | Full command example set |
+| Workflows | 32 | Core workflow coverage |
 | Agents | 7 | Primary team roles covered |
 | Rules | 15 | Universal + Cursor rule examples |
-| **Total** | **122** | **Curated wiki coverage** |
+| **Total** | **125** | **Curated wiki coverage** |
 
 ---
 
@@ -33,6 +33,7 @@
 | Skill | Description |
 |-------|-------------|
 | [brainstorming](examples-skills-brainstorming) | Creative ideation |
+| [write-prd](examples-skills-write-prd) | Interview-first PRD drafting |
 | [lmf](examples-skills-lmf) | Learning-first tutorial orchestration |
 | [writing-plans](examples-skills-writing-plans) | Task decomposition |
 | [executing-plans](examples-skills-executing-plans) | Wave-based execution |
@@ -101,6 +102,7 @@
 | [/verify](examples-commands-verify) | Verification |
 | [/doc](examples-commands-doc) | Documentation |
 | [/explain](examples-commands-explain) | Explanations |
+| [/prd](examples-commands-prd) | PRD drafting |
 | [/lmf](examples-commands-lmf) | Learning-first tutorial flow |
 | [/research](examples-commands-research) | Deep research |
 | [/integrate](examples-commands-integrate) | API integration |
@@ -132,6 +134,7 @@
 | [/doc](examples-workflows-doc) | Documentation |
 | [/execute](examples-workflows-execute) | Plan execution |
 | [/explain](examples-workflows-explain) | Explanations |
+| [/prd](examples-workflows-prd) | PRD drafting |
 | [/lmf](examples-workflows-lmf) | Learning-first tutorial flow |
 | [/fix-issue](examples-workflows-fix-issue) | Issue fixing |
 | [/incident-response](examples-workflows-incident-response) | Incidents |

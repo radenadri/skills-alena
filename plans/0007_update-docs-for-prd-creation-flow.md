@@ -1,4 +1,4 @@
-### [PLANNED] Update README and Wiki for the PRD Creation Flow
+### [DONE] Update README and Wiki for the PRD Creation Flow
 
 **Goal**
 Update the public docs so ALENA clearly documents its new PRD creation capability, including the local wrapper skill, the Claude Code and Antigravity `/prd` surfaces, and the expected interview-first PRD workflow.
@@ -10,11 +10,11 @@ Update the public docs so ALENA clearly documents its new PRD creation capabilit
 4. Keep claims scoped to this repo and its local assets; document what ALENA ships here instead of implying external integrations or hosted PRD tooling.
 
 **Tasks**
-- [ ] Identify the exact README and wiki sections that should carry PRD messaging, especially the top-level overview, Complete Asset Catalog, CLI reference, installation guidance, commands reference, workflows reference, examples index, and wiki sidebar.
-- [ ] Add concise README positioning for ALENA's PRD flow, including how `write-prd` differs from generic planning and how `/prd` connects brainstorming and documentation into a product artifact.
-- [ ] Add or update README catalog entries for the `write-prd` skill plus `/prd` command and workflow, and refresh any counts affected by the new assets.
-- [ ] Update the relevant wiki reference pages and add example pages so users can find the PRD capability from both the install docs and the examples/navigation surfaces.
-- [ ] Run grep-based documentation checks to confirm the docs use the agreed PRD naming and point to the right local files and slash surfaces.
+- [x] Identify the exact README and wiki sections that should carry PRD messaging, especially the top-level overview, Complete Asset Catalog, CLI reference, installation guidance, commands reference, workflows reference, examples index, and wiki sidebar.
+- [x] Add concise README positioning for ALENA's PRD flow, including how `write-prd` differs from generic planning and how `/prd` connects brainstorming and documentation into a product artifact.
+- [x] Add or update README catalog entries for the `write-prd` skill plus `/prd` command and workflow, and refresh any counts affected by the new assets.
+- [x] Update the relevant wiki reference pages and add example pages so users can find the PRD capability from both the install docs and the examples/navigation surfaces.
+- [x] Run grep-based documentation checks to confirm the docs use the agreed PRD naming and point to the right local files and slash surfaces.
 
 **Verification**
 - `rg -n "write-prd|/prd|PRD|product requirements" README.md docs/wiki`
