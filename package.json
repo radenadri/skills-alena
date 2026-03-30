@@ -1,0 +1,85 @@
+{
+  "name": "@radenadri/skills-alena",
+  "version": "1.0.0",
+  "description": "ALENA is a personal toolkit for autonomous, networked AI agents — 33 skills, 34 commands, 37 workflows, 9 agents, 10 cursor rules.",
+  "author": {
+    "name": "Adriana Eka Prayudha",
+    "email": "radenadriep@gmail.com",
+    "url": "https://radenadri.xyz"
+  },
+  "license": "MIT",
+  "type": "module",
+  "bin": {
+    "skills-alena": "./dist/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "skills",
+    "rules",
+    "commands",
+    "workflows",
+    "agents",
+    "cursor-rules",
+    "hooks",
+    "CLAUDE.md",
+    "GEMINI.md",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "ai",
+    "skills",
+    "agents",
+    "cursor",
+    "claude",
+    "copilot",
+    "windsurf",
+    "gemini",
+    "antigravity",
+    "coding-assistant",
+    "code-review",
+    "tdd",
+    "debugging",
+    "security-audit",
+    "performance",
+    "best-practices",
+    "agentic",
+    "llm",
+    "developer-tools"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/radenadri/skills-alena.git"
+  },
+  "bugs": {
+    "url": "https://github.com/radenadri/skills-alena/issues"
+  },
+  "homepage": "https://alena.radenadri.xyz",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "prepublishOnly": "npm run build",
+    "sync-version": "node scripts/sync-version.js",
+    "wiki:push": "bash scripts/push-wiki.sh",
+    "npm:publish": "bash scripts/publish-npm.sh",
+    "npm:publish:patch": "bash scripts/publish-npm.sh patch",
+    "npm:publish:minor": "bash scripts/publish-npm.sh minor",
+    "npm:publish:major": "bash scripts/publish-npm.sh major",
+    "test:local-package": "bash scripts/test-local-package.sh",
+    "postversion": "npm run sync-version && git add -u && git commit --amend --no-edit",
+    "release:patch": "bash scripts/publish-npm.sh patch",
+    "release:minor": "bash scripts/publish-npm.sh minor",
+    "release:major": "bash scripts/publish-npm.sh major"
+  },
+  "devDependencies": {
+    "@types/node": "^25.4.0",
+    "tsup": "^8.0.0",
+    "typescript": "^5.3.0"
+  }
+}

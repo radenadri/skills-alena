@@ -1,0 +1,52 @@
+# ────────────────────────────────────────────────────────
+# Skills ALENA — Docker Image
+# ────────────────────────────────────────────────────────
+# Packages the CLI + all assets into a container so
+# users can install skills without Node.js on their host.
+#
+# Build:  docker build -t skills-alena .
+# Run:    docker run --rm -v $(pwd):/workspace skills-alena add --all -a claude-code -y
+# List:   docker run --rm skills-alena list
+# ────────────────────────────────────────────────────────
+
+FROM node:20-alpine AS builder
+
+WORKDIR /app
+
+# Install dependencies first (cache layer)
+COPY package.json package-lock.json ./
+RUN npm ci --ignore-scripts
+
+# Copy source and build
+COPY tsconfig.json tsup.config.ts ./
+COPY src/ src/
+RUN npm run build
+
+# ── Production image ──────────────────────────────────
+FROM node:20-alpine
+
+LABEL maintainer="Adriana Eka Prayudha <radenadriep@gmail.com>"
+LABEL org.opencontainers.image.title="Skills ALENA"
+LABEL org.opencontainers.image.description="The ultimate AI agent skills framework"
+LABEL org.opencontainers.image.source="https://github.com/radenadri/skills-alena"
+LABEL org.opencontainers.image.license="MIT"
+
+WORKDIR /app
+
+# Copy only what's needed at runtime
+COPY package.json ./
+COPY --from=builder /app/dist/ dist/
+COPY skills/ skills/
+COPY commands/ commands/
+COPY workflows/ workflows/
+COPY agents/ agents/
+COPY rules/ rules/
+COPY cursor-rules/ cursor-rules/
+COPY CLAUDE.md ./
+COPY GEMINI.md ./
+
+# Workspace mount point
+WORKDIR /workspace
+
+ENTRYPOINT ["node", "/app/dist/cli.js"]
+CMD ["help"]

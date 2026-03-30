@@ -1,0 +1,15 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "slug": "skills-alena",
+  "displayName": "Skills ALENA",
+  "shortDescription": "31 skills that make AI assistants think like senior staff engineers",
+  "category": "workflow",
+  "tags": [
+    "skills",
+    "audit",
+    "planning",
+    "code-review",
+    "debugging",
+    "security"
+  ]
+}

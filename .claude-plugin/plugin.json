@@ -1,0 +1,23 @@
+{
+  "name": "skills-alena",
+  "version": "4.0.0",
+  "description": "An agentic skills framework that makes AI assistants think like senior staff engineers. 31 skills, 28 commands, 9 agents.",
+  "author": "Adriana Eka Prayudha",
+  "license": "MIT",
+  "homepage": "https://github.com/radenadri/skills-alena",
+  "keywords": [
+    "skills",
+    "agents",
+    "audit",
+    "planning",
+    "verification",
+    "code-review"
+  ],
+  "components": {
+    "commands": "commands/",
+    "agents": "agents/",
+    "skills": "skills/",
+    "hooks": "hooks/",
+    "rules": "rules/"
+  }
+}
