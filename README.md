@@ -24,16 +24,6 @@
 
 **ALENA** is a personal toolkit for autonomous, networked AI agents. The long form is **Autonomous Layer for Executing Networked Agents**. Install once, use everywhere — across **34+ supported agents** including Antigravity, Cursor, Claude Code, Gemini CLI, Windsurf, Copilot, and more.
 
-### 📄 PRD Creation Flow
-
-ALENA now ships a local PRD creation path for teams that want product clarification before implementation. The flow is built around:
-
-- a wrapper skill at `skills/write-prd/`
-- a Claude Code command at `commands/prd.md`
-- an Antigravity workflow at `workflows/prd.md`
-
-`write-prd` is not the same as `writing-plans`. `write-prd` is interview-first and product-first: it clarifies the user, problem, goals, non-goals, and success definition before drafting a reusable product requirements document. `writing-plans` starts after that, when the approved PRD needs to turn into implementation work.
-
 ---
 
 ### 💎 The Gem: LLM Council v2 + Memory Module
