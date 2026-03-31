@@ -92,11 +92,19 @@ Best for:
 - tutorial-first feature guidance
 - "teach me before we implement"
 - explanation-heavy planning and documentation work
+- manual implementation when you want copyable code instead of automatic execution
+
+Expected output shape:
+- plain-English framing first
+- mental model and trade-offs second
+- ordered steps third
+- copyable code blocks when implementation detail is needed
 
 **Usage:**
 ```bash
 @/lmf "Help me understand how to add audit logging to this codebase"
 @/lmf "Teach me the right way to design the auth flow before implementation"
+@/lmf "Show me the files and code for feature flags, but do not execute it"
 ```
 
 ### `/research`

@@ -354,7 +354,7 @@ Skills are deep instructional documents that teach AI agents HOW to think about 
 |:---:|:---|:---|
 | 1 | 💡 **brainstorming** | Creative ideation — mind maps, structured exploration, and divergent thinking before any feature work |
 | 2 | 📄 **write-prd** | Product requirements writing — interview-first wrapper skill that turns feature ideas into structured PRDs before engineering planning — ✨ NEW |
-| 3 | 🧭 **lmf** | Learning-first mode flow — wrapper skill that combines `brainstorming`, `writing-plans`, and `writing-documentation` into a tutorial-first orchestration pattern — ✨ NEW |
+| 3 | 🧭 **lmf** | Learning-first mode flow — wrapper skill that combines `brainstorming`, `writing-plans`, and `writing-documentation` into a tutorial-first orchestration pattern with copyable code when manual implementation is needed — ✨ NEW |
 | 4 | 📝 **writing-plans** | Task decomposition — dependency-aware plans with effort estimates, risk assessments, and implementation waves |
 | 5 | ⚙️ **executing-plans** | Plan execution — wave-based implementation with checkpoints, inline verification, and state tracking |
 | 6 | 🧪 **test-driven-development** | TDD methodology — red-green-refactor cycle, test architecture, fixture patterns, and coverage strategies |
@@ -431,7 +431,7 @@ Commands are Claude Code slash commands (`.md` files installed to `.claude/comma
 | `/init-project` | 🏗️ Initialize a new project with `.planning/` directory — `PROJECT.md`, `REQUIREMENTS.md`, `ROADMAP.md`, `STATE.md`, `config.json`. Uses `planning-tools.cjs` for deterministic bootstrapping. |
 | `/discuss` | 💬 Pre-planning MCQ decision capture — presents multiple-choice questions with recommendations, quick-answer format (`1A 2B 3C`), locks decisions in CONTEXT.md |
 | `/prd` | 📄 Product requirements drafting — interview-first flow that uses the local `write-prd` wrapper skill to produce a reusable PRD before implementation planning — ✨ NEW |
-| `/lmf` | 🧭 Learning-first tutorial flow — uses the local `lmf` wrapper skill to combine explanation, planning, and documentation-style guidance before execution — ✨ NEW |
+| `/lmf` | 🧭 Learning-first tutorial flow — uses the local `lmf` wrapper skill to combine explanation, planning, and copyable code guidance before execution — ✨ NEW |
 | `/plan` | 📋 Create a 2-3 task implementation plan with task anatomy (`<files>` `<action>` `<verify>` `<done>`), context budgets, and locked decision enforcement |
 | `/execute` | ⚙️ Execute an implementation plan with deviation protocol (4 categories), checkpoint system, and `planning-tools.cjs` state management |
 | `/verify` | ✅ Validate implementations against plans — automated checks, compliance verification, regression testing, conversational UAT |
@@ -511,7 +511,7 @@ Workflows are Antigravity step-by-step execution scripts (`.md` files installed 
 | `/init-project` | 🏗️ Initialize project with `.planning/` structure |
 | `/discuss` | 💬 Pre-planning MCQ discussion with quick-answer |
 | `/prd` | 📄 Product requirements workflow that mirrors the local `write-prd` wrapper skill in Antigravity — ✨ NEW |
-| `/lmf` | 🧭 Learning-first tutorial workflow that mirrors the local `lmf` wrapper skill in Antigravity — ✨ NEW |
+| `/lmf` | 🧭 Learning-first tutorial workflow that mirrors the local `lmf` wrapper skill in Antigravity, including copyable code when implementation is needed — ✨ NEW |
 | `/plan-feature` | 📋 Plan a feature with research, design, and task decomposition |
 | `/execute` | ⚙️ Execute plans with wave-based steps and verification |
 | `/verify` | ✅ Validate implementation against plans |

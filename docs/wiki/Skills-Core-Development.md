@@ -61,14 +61,16 @@ These skills cover the complete development workflow — from brainstorming idea
 - How to explain the mental model before prescribing steps
 - How to synthesize multiple ALENA skills into one teaching-oriented response
 - How to keep explanation grounded in the current repo instead of generic tutorial filler
+- How to provide copyable code blocks when the user wants to implement manually instead of using `/execute`
 - How to end with a concrete next move
 
 **Key Protocols:**
 1. Explain what the task actually is in plain English
 2. Teach the mental model before code or checklists
 3. Compose `brainstorming`, `writing-plans`, and `writing-documentation`
-4. Stay local-first and contextual
-5. Land on an immediate next action the user can follow
+4. Include copyable code when implementation detail is needed
+5. Stay local-first and contextual
+6. Land on an immediate next action the user can follow
 
 **Related Surface Area:**
 - Claude Code: `/lmf`

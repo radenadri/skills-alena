@@ -1,5 +1,5 @@
 ---
-description: Run the learning-first /lmf flow for tutorial-style explanation, planning, and documentation-oriented guidance
+description: Run the learning-first /lmf flow for tutorial-style explanation, planning, and copyable code guidance
 ---
 
 ## Steps
@@ -28,12 +28,14 @@ rg -n "$ARGUMENTS|lmf|tutorial|plan|README|CLAUDE|GEMINI" . --glob '!node_module
    - **Mental Model** - how to think about the task
    - **Recommended Path** - what to do and why
    - **Step-by-Step** - concrete actions in order
+   - **Copyable Code** - complete code blocks for the files the user may type manually when code is needed
    - **Next Move** - the immediate follow-up action
 
 6. Keep `/lmf` tutorial-first:
    - Explain before prescribing
    - Stay local-first and grounded in the current repo
-   - Use examples only when they teach faster than prose
+   - Include copyable code when it teaches faster than prose or when the user wants to implement manually
+   - Avoid placeholder snippets, pseudo-code, or "fill this in later" examples
    - Do not delegate to a local helper script
 
 7. If the user wants to move from teaching mode to implementation, bridge cleanly into `/plan`, `/execute`, or direct execution as appropriate.

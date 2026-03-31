@@ -1,6 +1,6 @@
 ---
 name: lmf
-description: "Run the learning-first /lmf flow for tutorial-style planning and explanation before execution."
+description: "Run the learning-first /lmf flow for tutorial-style planning, explanation, and copyable code before execution."
 disable-model-invocation: true
 argument-hint: "[topic-or-task]"
 ---
@@ -18,6 +18,7 @@ Guide the user through the request in a tutorial-first way using the local `lmf`
    - Mental model
    - Recommended path
    - Step-by-step actions
+   - Copyable code
    - Next move
 4. Compose the existing ALENA skills inside the response:
    - `brainstorming` for intent and trade-offs
@@ -26,11 +27,13 @@ Guide the user through the request in a tutorial-first way using the local `lmf`
 5. Keep the output local-first and tutorial-first:
    - Explain before optimizing
    - Be specific to the current request and codebase
-   - Use small examples only when they reduce ambiguity
+   - Include copyable code blocks when the user needs to implement manually or when code would teach faster than prose
+   - Prefer complete file-level snippets over pseudo-code and placeholders
    - Do not turn `/lmf` into a shell-script or helper-script instruction
 
 ## Success Criteria
 
 - The user understands the problem shape before seeing the steps
 - The response contains a clear recommendation with trade-offs
+- The response includes copyable code when implementation detail is needed
 - The next action is explicit enough to execute immediately

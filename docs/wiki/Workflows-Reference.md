@@ -81,7 +81,7 @@ Workflows are `.md` files installed to `.agent/workflows/`. They provide step-by
 
 ## `/lmf` Workflow Notes
 
-`/lmf` is the Antigravity entrypoint for ALENA's learning-first flow. It mirrors the local wrapper skill and is best used when you want tutorial-style explanation before you switch to `/plan`, `/execute`, or direct implementation.
+`/lmf` is the Antigravity entrypoint for ALENA's learning-first flow. It mirrors the local wrapper skill and is best used when you want tutorial-style explanation before you switch to `/plan`, `/execute`, or direct implementation. When the task is implementation-oriented, `/lmf` should also include copyable code blocks so the user can type the solution manually instead of handing execution to the agent.
 
 ## `/prd` Workflow Notes
 

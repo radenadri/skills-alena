@@ -7,6 +7,7 @@
 - You want explanation before implementation
 - You want a tutorial-style breakdown of a feature or change
 - You need planning guidance that still teaches the mental model
+- You want to type the code yourself instead of letting the agent auto-execute it
 - You want one response that combines framing, steps, and next actions
 
 ---
@@ -23,6 +24,7 @@
 - explain what audit logging is in this codebase context
 - describe the mental model before implementation
 - recommend an approach and why it fits
+- include copyable code when the implementation needs concrete files or snippets
 - end with concrete next actions
 
 ### Example 2: Tutorial-first planning
@@ -46,6 +48,7 @@
 - the mental model
 - the recommended path
 - ordered steps
+- copyable code blocks for the implementation when needed
 - the next move into implementation
 
 ---
