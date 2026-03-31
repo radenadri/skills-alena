@@ -75,6 +75,11 @@ AI coding tasks fail at scale because no single agent can hold all context: data
 
 ## 🔄 Version History
 
+### 1.2.1 — Improve `/lmf` for manual coding
+
+- Update `lmf` so it remains learning-first but also includes copyable code blocks when implementation detail is needed.
+- Position `/lmf` as the manual-coding alternative to `/execute` when the user wants to type the code themselves instead of having the agent apply it automatically.
+
 ### 1.2.0 — Add `/prd` command
 
 - Add `write-prd` skill. Add `/prd` command for Claude Code and Antigravity.
