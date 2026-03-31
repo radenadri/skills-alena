@@ -133,6 +133,22 @@ npx @radenadri/skills-alena list
 
 After installing skills, your workflow depends on whether you're starting fresh or joining an existing codebase.
 
+### First question: do you need a PRD?
+
+If you only have an idea, a product problem, or a rough feature request, start with `/prd` before engineering planning.
+
+- `/prd` clarifies the user, problem, goals, non-goals, constraints, and success metrics.
+- `/discuss` locks implementation preferences and trade-off decisions before planning.
+- `/plan` turns the approved PRD or clarified request into implementation work.
+
+Think of it as:
+
+```text
+/prd = what and why
+/discuss = preference and trade-off lock-in
+/plan = how to build it
+```
+
 ### 🟢 New Project (Greenfield)
 
 > You're building something from scratch. No existing code, no legacy decisions.
@@ -141,6 +157,10 @@ After installing skills, your workflow depends on whether you're starting fresh 
 ┌─────────────────────────────────────────────────────────────────┐
 │  GREENFIELD WORKFLOW                                            │
 │                                                                 │
+│  Step 0 ─ /prd (optional)                                       │
+│           Use when the project or feature idea is still fuzzy    │
+│           Produces a product requirements document first         │
+│                          ▼                                      │
 │  Step 1 ─ /init-project                                         │
 │           Creates .planning/ structure, ROADMAP, REQUIREMENTS    │
 │           Bootstraps memory system + config.json                 │
@@ -171,10 +191,13 @@ After installing skills, your workflow depends on whether you're starting fresh 
 # 1. Install skills
 npx @radenadri/skills-alena add
 
-# 2. Tell your AI agent:
+# 2. If the product idea is still fuzzy, start here:
+/prd "describe the product or feature idea"
+
+# 3. Then tell your AI agent:
 /init-project
 
-# 3. The agent will walk you through:
+# 4. The agent will walk you through:
 #    → Project context gathering
 #    → Requirements capture
 #    → Roadmap phases
@@ -198,20 +221,24 @@ npx @radenadri/skills-alena add
 │           Writes: MEMORY.md with project brain                   │
 │           Captures: architecture, conventions, known issues      │
 │                          ▼                                      │
-│  Step 3 ─ /discuss                                              │
+│  Step 3 ─ /prd (optional)                                       │
+│           Use for new feature work that needs product clarity    │
+│           Grounds the PRD in the real codebase constraints       │
+│                          ▼                                      │
+│  Step 4 ─ /discuss                                              │
 │           "I want to add [feature] to this existing project"     │
 │           Agent asks MCQ questions considering existing patterns  │
 │           Quick-answer: "1A 2B 3C 4A"                           │
 │                          ▼                                      │
-│  Step 4 ─ /plan                                                 │
+│  Step 5 ─ /plan                                                 │
 │           Creates plan that respects existing architecture       │
 │           References real files, real patterns, real conventions  │
 │                          ▼                                      │
-│  Step 5 ─ /execute                                              │
+│  Step 6 ─ /execute                                              │
 │           Implements following existing patterns                 │
 │           codebase-conformity skill ensures consistency           │
 │                          ▼                                      │
-│  Step 6 ─ /verify                                               │
+│  Step 7 ─ /verify                                               │
 │           Validates against plan + existing test suite            │
 └─────────────────────────────────────────────────────────────────┘
 ```
@@ -224,10 +251,15 @@ npx @radenadri/skills-alena add
 # 2. Tell your AI agent:
 /memory init
 
-# 3. Let the agent scan your codebase, then:
+# 3. Let the agent scan your codebase
+
+# 4. If the feature needs product clarification, do this next:
+/prd "describe the feature or product problem"
+
+# 5. Then lock implementation decisions:
 /discuss add user preferences feature
 
-# 4. Answer the MCQ questions, then:
+# 6. Answer the MCQ questions, then:
 /plan
 /execute
 ```
