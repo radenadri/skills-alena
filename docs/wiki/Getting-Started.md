@@ -24,6 +24,24 @@ The CLI auto-detects your AI agents and installs everything — skills, commands
 
 ---
 
+## First Question: Do You Need a PRD?
+
+If you only have an idea, a product problem, or a rough feature request, start with `/prd` before engineering planning.
+
+- `/prd` clarifies the user, problem, goals, non-goals, constraints, and success metrics
+- `/discuss` locks implementation preferences and trade-off decisions
+- `/plan` turns the approved PRD or clarified request into implementation work
+
+Think of it as:
+
+```text
+/prd = what and why
+/discuss = preference and trade-off lock-in
+/plan = how to build it
+```
+
+---
+
 ## 🟢 Greenfield — Building From Scratch
 
 > You're starting a brand new project. No code exists yet.
@@ -31,8 +49,31 @@ The CLI auto-detects your AI agents and installs everything — skills, commands
 ### The Flow
 
 ```
-/init-project → /discuss → /plan → /execute → /verify
+/prd (optional) → /init-project → /discuss → /plan → /execute → /verify
 ```
+
+### Step 0: `/prd` — Clarify the Product Before Planning
+
+Use this when the project or feature idea is still fuzzy.
+
+**What you say:**
+```
+/prd "describe the product or feature idea"
+```
+
+**What happens in plain English:**
+
+The AI interviews you before it drafts anything. It clarifies:
+- who the user is
+- what problem you are solving
+- what success looks like
+- what is explicitly out of scope
+
+The output is a reusable product requirements document, not an implementation plan.
+
+If your scope is already clear, you can skip this step and go straight to `/init-project`.
+
+---
 
 ### Step 1: `/init-project` — Set Up the AI's Notebook
 
@@ -268,7 +309,7 @@ If something was missed, it runs a **gap closure** — a mini 1-2 task plan to f
 ### The Flow
 
 ```
-/memory init → Codebase Mapping → /discuss → /plan → /execute → /verify
+/memory init → Codebase Mapping → /prd (optional) → /discuss → /plan → /execute → /verify
 ```
 
 ### Step 1: `/memory init` — Set Up the Notebook (Lightweight)
@@ -309,7 +350,27 @@ All of this goes into `MEMORY.md`. Now the AI **knows** your project like a deve
 
 ---
 
-### Step 3: `/discuss` — Lock Decisions (Context-Aware)
+### Step 3: `/prd` — Clarify the Feature Against the Real Codebase
+
+Use this when the feature request is still ambiguous and you want product clarity before implementation decisions.
+
+**What you say:**
+```
+/prd "describe the feature or product problem"
+```
+
+**What happens in plain English:**
+
+Because the AI already scanned your codebase in Steps 1 and 2, the PRD is grounded in real constraints instead of generic product copy. It can separate:
+- what the feature should do
+- what existing architecture will constrain
+- what should stay out of scope for now
+
+If the feature is already well-defined, you can skip this step and go straight to `/discuss`.
+
+---
+
+### Step 4: `/discuss` — Lock Decisions (Context-Aware)
 
 **What you say:**
 ```
@@ -337,7 +398,7 @@ Notice: the AI recommends Option A **because it matches your existing patterns**
 
 ---
 
-### Steps 4-6: Same as Greenfield
+### Steps 5-7: Same as Greenfield
 
 The `/plan`, `/execute`, and `/verify` steps work the same way, but with one key addition:
 

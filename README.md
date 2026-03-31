@@ -26,19 +26,21 @@
 
 ---
 
-### 💎 The Gem: LLM Council v2 + Memory Module
+## 💎 LLM Council v2 — Agent Team Coordination
 
-> The most powerful pattern in AI-assisted development — real subagent spawning with deterministic orchestration.
+### The Problem
+AI coding tasks fail at scale because no single agent can hold all context: database schemas, API routes, service dependencies, frontend components, and business logic — simultaneously. Linear handoffs lose context. Role-switching in a single context window wastes tokens.
 
-**The Memory Module** deeply scans your entire codebase BEFORE any work begins — databases, schemas, API routes, service dependencies, frontend components, tech stack — and creates a structured intelligence layer that persists across sessions.
+### The Solution: Real Subagent Spawning + Deterministic Orchestration
 
-**Council v2** spawns **real subagents** via `Task()` — each specialist gets a fresh 200k context window. The orchestrator stays lean at ~10-15% context, coordinating through 13 deterministic CLI commands with code-enforced quality gates.
+**Council v2** replaces the old role-switching pattern with **real subagent spawning** via `Task()`. Each specialist agent gets a fresh 200k context window — no shared context pollution. The orchestrator stays lean at ~10-15% context usage.
 
 ```
                     ╔═══════════════════════════════╗
-                    ║     🎯 ORCHESTRATOR (lean)     ║
-                    ║  13 CLI commands · Quality gates ║
-                    ║  ~10-15% context · Task() spawn  ║
+                    ║     🎯 ORCHESTRATOR (lean)      ║
+                    ║  ~10-15% context usage           ║
+                    ║  13 deterministic CLI commands    ║
+                    ║  Code-enforced quality gates      ║
                     ╚════════════╦══════════════════╝
                                  ║
                         Task() spawning
@@ -49,6 +51,17 @@
        │ 200k ctx │ │ 200k   │ │ 200k  │ │ 200k   │
        └──────────┘ └────────┘ └──────┘ └─────────┘
 ```
+
+### Key Capabilities
+
+| Capability | Description |
+|:---|:---|
+| 🧠 **Real subagent spawning** | Each agent gets a fresh 200k context via `Task()` — no shared context pollution |
+| 🎛️ **13 CLI commands** | Deterministic state machine for council orchestration (`council start`, `council next`, `council status`, etc.) |
+| 🚪 **Code-enforced quality gates** | Agents cannot advance phases without passing automated gate checks |
+| 🎯 **6 presets** | Full, Rapid, Debug, Architecture, Refactoring, Audit councils |
+| 📐 **Lean orchestrator** | Orchestrator uses ~10-15% context — delegates deep work to specialists |
+| 🧠 **Memory Module** | Deep intelligence layer: schemas, routes, services, components, tech stack |
 
 **What makes it different:**
 - ✅ **Real subagent spawning** — each agent gets a fresh 200k context via `Task()`, no context pollution
@@ -669,45 +682,6 @@ Use `/memory init` to initialize, `/memory write` to save.
 | Capture method | Lifecycle hooks | Instruction-based |
 | Storage | Database | Markdown files (git!) |
 | Setup | Plugin install + config | Add 4 lines to GEMINI.md |
-
----
-
-## 💎 LLM Council v2 — Agent Team Coordination
-
-### The Problem
-AI coding tasks fail at scale because no single agent can hold all context: database schemas, API routes, service dependencies, frontend components, and business logic — simultaneously. Linear handoffs lose context. Role-switching in a single context window wastes tokens.
-
-### The Solution: Real Subagent Spawning + Deterministic Orchestration
-
-**Council v2** replaces the old role-switching pattern with **real subagent spawning** via `Task()`. Each specialist agent gets a fresh 200k context window — no shared context pollution. The orchestrator stays lean at ~10-15% context usage.
-
-```
-                    ╔═══════════════════════════════╗
-                    ║     🎯 ORCHESTRATOR (lean)      ║
-                    ║  ~10-15% context usage           ║
-                    ║  13 deterministic CLI commands    ║
-                    ║  Code-enforced quality gates      ║
-                    ╚════════════╦══════════════════╝
-                                 ║
-                        Task() spawning
-              ┌──────────────────┼──────────────────┐
-       ┌──────▼──┐ ┌──────▼──┐ ┌──▼────┐ ┌──▼──────┐
-       │🔬Research│ │📐Planner│ │⚙️Exec │ │🔍Review │
-       │ Fresh    │ │ Fresh   │ │ Fresh │ │ Fresh   │
-       │ 200k ctx │ │ 200k   │ │ 200k  │ │ 200k   │
-       └──────────┘ └────────┘ └──────┘ └─────────┘
-```
-
-### Key Capabilities
-
-| Capability | Description |
-|:---|:---|
-| 🧠 **Real subagent spawning** | Each agent gets a fresh 200k context via `Task()` — no shared context pollution |
-| 🎛️ **13 CLI commands** | Deterministic state machine for council orchestration (`council start`, `council next`, `council status`, etc.) |
-| 🚪 **Code-enforced quality gates** | Agents cannot advance phases without passing automated gate checks |
-| 🎯 **6 presets** | Full, Rapid, Debug, Architecture, Refactoring, Audit councils |
-| 📐 **Lean orchestrator** | Orchestrator uses ~10-15% context — delegates deep work to specialists |
-| 🧠 **Memory Module** | Deep intelligence layer: schemas, routes, services, components, tech stack |
 
 ---
 

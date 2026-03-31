@@ -82,7 +82,31 @@ Now let me scan your codebase to understand the project...
 
 ---
 
-## Step 3: Discuss — Context-Aware Questions
+## Step 3: Clarify the Feature with `/prd`
+
+**You:**
+```
+/prd "We need user preferences, but I want the product requirements clarified before implementation planning"
+```
+
+**AI responds:**
+```markdown
+## 📄 Product Clarification: User Preferences
+
+Before I plan implementation, I'll clarify the product artifact against your existing codebase.
+
+- Primary user: authenticated user managing trading-bot preferences
+- Core user goals: manage notifications, display currency, timezone, and theme
+- Non-goals: strategy configuration, exchange credentials, or portfolio rules
+- Constraints from the codebase: FastAPI domain routers, repository pattern, PostgreSQL-backed persistence
+- Success definition: a user can view and update preferences without breaking existing account flows
+```
+
+**Why this matters:** The PRD grounds the feature in real codebase constraints before the AI starts locking implementation decisions.
+
+---
+
+## Step 4: Discuss — Context-Aware Questions
 
 **You:**
 ```
@@ -181,7 +205,7 @@ Saved to: .planning/research/user-preferences-context.md
 
 ---
 
-## Step 4: Plan (Pattern-Aware)
+## Step 5: Plan (Pattern-Aware)
 
 **You:**
 ```
@@ -275,7 +299,7 @@ Check: PATCH /preferences updates and returns new values
 
 ---
 
-## Step 5: Execute (Pattern-Conforming)
+## Step 6: Execute (Pattern-Conforming)
 
 **You:**
 ```
@@ -337,7 +361,7 @@ Running: python -m mypy src/ ✅ (clean)
 
 ---
 
-## Step 6: Verify
+## Step 7: Verify
 
 **You:**
 ```

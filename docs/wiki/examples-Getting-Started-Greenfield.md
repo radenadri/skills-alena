@@ -10,6 +10,39 @@ You're building a **real-time trading dashboard** that shows live crypto prices,
 
 ---
 
+## Step 0: Clarify the Product
+
+**You:**
+```
+/prd "I want a personal crypto trading dashboard but I need help defining the product clearly first"
+```
+
+**AI responds:**
+```
+Before we talk implementation, I'll clarify the product shape.
+
+1. Who is the primary user?
+2. What are the core jobs this dashboard must do?
+3. What is explicitly out of scope for v1?
+4. What constraints matter most: time, budget, external APIs, complexity?
+5. How will you know v1 is successful?
+```
+
+**You:**
+```
+1. Just me — personal use
+2. Live prices, portfolio visibility, trade history, P&L charts
+3. No automated trading in v1
+4. Must connect to Binance API. 1 week timeline.
+5. I can monitor positions and review recent trading performance in one place.
+```
+
+**AI produces:**
+- a PRD with goals, non-goals, constraints, and success metrics
+- a clearer project boundary before planning starts
+
+---
+
 ## Step 1: Install and Init
 
 **You:** Install skills and tell your AI agent:

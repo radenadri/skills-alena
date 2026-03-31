@@ -1,12 +1,12 @@
 # 🧠 ALENA Wiki
 
-Welcome to the **ALENA v1.1.0** wiki. This documentation is written for the ALENA toolkit first: a personal toolkit for autonomous, networked AI agents with reusable skills, commands, workflows, agents, rules, hooks, and planning assets.
+Welcome to the **ALENA v1.2.0** wiki. This documentation is written for the ALENA toolkit first: a personal toolkit for autonomous, networked AI agents with reusable skills, commands, workflows, agents, rules, hooks, and planning assets.
 
 ALENA is independently maintained by Adriana Eka Prayudha. It is also explicitly inspired by [Skills by Amrit](https://github.com/boparaiamrit/skills-by-amrit), especially in its skills-driven workflow design.
 
 ---
 
-## What Ships in v1.1.0
+## What Ships in v1.2.0
 
 - **35 skills** for planning, PRD writing, debugging, reviewing, auditing, documentation, memory, coordination, and `lmf` learning-first guidance
 - **36 Claude Code commands** for project lifecycle work

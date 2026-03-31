@@ -19,6 +19,16 @@ That's it. The CLI will:
 
 ## Step 2: Choose Your Path
 
+### Need Product Clarity First?
+
+If the idea is still fuzzy, start here before planning:
+
+```bash
+/prd "describe the product or feature idea"
+```
+
+Use `/prd` when you need the AI to clarify the user, problem, goals, non-goals, and success metrics before implementation planning.
+
 ### 🟢 Starting a New Project?
 
 Tell your AI agent:
@@ -45,7 +55,8 @@ The agent will:
 1. Create the `.planning/` directory
 2. Scan your codebase automatically (patterns, conventions, tech stack)
 3. Write everything it learns into `MEMORY.md`
-4. Then you can `/discuss` your feature and `/plan` it
+4. Then you can `/prd` if the feature still needs product clarity
+5. Then `/discuss` your feature and `/plan` it
 
 Full guide: [Getting Started — Brownfield](Getting-Started#-brownfield--existing-codebase)
 
@@ -62,11 +73,12 @@ No planning, no discussion. Just do the thing.
 ## Step 3: The Core Workflow
 
 ```
-/discuss → /plan → /execute → /verify
+/prd (optional) → /discuss → /plan → /execute → /verify
 ```
 
 | Step | What Happens |
 |:---|:---|
+| `/prd` | AI interviews first and drafts a product requirements document when the idea is still fuzzy |
 | `/discuss` | AI asks multiple-choice questions, you answer in one line (`1A 2B 3C`) |
 | `/plan` | AI creates a 2-3 task plan respecting your locked decisions |
 | `/execute` | AI implements task by task with verification at each step |
